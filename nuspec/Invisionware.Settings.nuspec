@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>Invisionware.Settings</id>
+		<version>1.1.3-pre14</version>
+		<title>Invisionware.Settings</title>
+		<authors>ravensorb</authors>
+		<owners>ravensorb</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Contains a generalize implementation for handling complex configuration/settings within an application.  Based off the design of Serilog</description>
+		<summary>Contains a generalize implementation for handling complex configuration/settings within an application.</summary>
+		<releaseNotes>Initial Version</releaseNotes>
+		<copyright>(c) 2016 Invisionware</copyright>
+		<language>en-US</language>
+		<tags>invisionware settings appsettings config configuration</tags>
+		<dependencies>
+			<group>
+				<dependency id="Serilog" version="2.4.0" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!-- Framework: PCL -->
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.dll" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.pdb" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
+
+		<!-- Framework: NetStandard1.1 -->
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.dll" target="lib\netstandard1.1" />
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.pdb" target="lib\netstandard1.1" />
+
+	</files>
+</package>

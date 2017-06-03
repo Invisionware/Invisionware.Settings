@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>091122ee-23cd-4d5f-b979-eee7409b47bb</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Invisionware.Settings.Sinks.AzureStorage.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AzureBlobStorageSettingsConfigurationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AzureBlobStorageSink.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AzureFileStorageSettingsConfigurationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AzureFileStorageSink.cs" />
+  </ItemGroup>
+</Project>

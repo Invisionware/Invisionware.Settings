@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Invisionware.Settings.Sinks.AzureDocumentDb.NetStandard16</AssemblyName>
+    <RootNamespace>Invisionware.Settings.Sinks.AzureDocumentDb</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Serilog" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Invisionware.Settings.Sinks.AzureDocumentDb.Shared\Invisionware.Settings.Sinks.AzureDocumentDb.Shared.projitems" Label="Shared" />
+
+</Project>

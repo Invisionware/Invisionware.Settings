@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>Invisionware.Settings.Sinks.JsonNet</id>
+		<version>1.1.3-pre14</version>
+		<title>Invisionware.Settings.Sinks.JsonNet</title>
+		<authors>ravensorb</authors>
+		<owners>ravensorb</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Contains an implementation of a Reader/Write sink for Json.NET for the Invisionware Settings Library</description>
+		<summary>Contains an implementation reading and writing settings from Json.NET.</summary>
+		<releaseNotes>Initial Version</releaseNotes>
+		<copyright>(c) 2016 Invisionware</copyright>
+		<language>en-US</language>
+		<tags>invisionware settings azure documentdb config configuration</tags>
+		<dependencies>
+			<group>
+				<dependency id="Newtonsoft.Json" version="9.0.1" />
+				<dependency id="Serilog" version="2.4.0" />
+
+				<dependency id="Invisionware.Settings" version="1.1.3-pre14" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!-- Framework: .NET 4.6 -->
+		<file src="..\src\Invisionware.Settings.Sinks.JsonNet\bin\$Configuration$\Invisionware.Settings.Sinks.JsonNet.dll" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.Sinks.JsonNet\bin\$Configuration$\Invisionware.Settings.Sinks.JsonNet.pdb" target="lib\net46" />
+
+		<!-- Framework: NetStandard1.3 -->
+		<file src="..\src\Invisionware.Settings.Sinks.JsonNet.NetStandard\bin\$Configuration$\netstandard1.3\Invisionware.Settings.Sinks.JsonNet.NetStandard13.dll" target="lib\netstandard1.3" />
+		<file src="..\src\Invisionware.Settings.Sinks.JsonNet.NetStandard\bin\$Configuration$\netstandard1.3\Invisionware.Settings.Sinks.JsonNet.NetStandard13.pdb" target="lib\netstandard1.3" />
+		
+	</files>
+</package>

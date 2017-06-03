@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>Invisionware.Settings.Sinks.JsonNet.NetStandard13</AssemblyName>
+    <RootNamespace>Invisionware.Settings.Sinks.JsonNet</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Serilog" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Invisionware.Settings.Sinks.JsonNet.Shared\Invisionware.Settings.Sinks.JsonNet.Shared.projitems" Label="Shared" />
+
+</Project>
