@@ -9,7 +9,9 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains a generalize implementation for handling complex configuration/settings within an application.  Based off the design of Serilog</description>
 		<summary>Contains a generalize implementation for handling complex configuration/settings within an application.</summary>
-		<releaseNotes>Initial Version</releaseNotes>
+		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
+		<releaseNotes></releaseNotes>
 		<copyright>(c) 2016 Invisionware</copyright>
 		<language>en-US</language>
 		<tags>invisionware settings appsettings config configuration</tags>

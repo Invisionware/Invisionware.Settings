@@ -9,7 +9,9 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains an implementation of a Reader/Write sink for Azure Blob and File Storage for the Invisionware Settings Library</description>
 		<summary>Contains an implementation reading and writing settings from Azure Blob and File Storage.</summary>
-		<releaseNotes>Initial Version</releaseNotes>
+		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
+		<releaseNotes></releaseNotes>
 		<copyright>(c) 2016 Invisionware</copyright>
 		<language>en-US</language>
 		<tags>invisionware settings azure blob file config configuration</tags>
