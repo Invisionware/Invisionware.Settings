@@ -4,7 +4,14 @@ Invisionware Frmaework is a collection of utilities classes, extension methods, 
 ## Settings
 This portion of the Invisionware Framework provides a Settings Framework that is very similiar to Serilog in that it supports extensions for where the settings are stored, how they are accessed, etc.
 
-Add the following using statement
+[![NuGet](https://img.shields.io/nuget/v/Invisionware.Settings.svg)](https://www.nuget.org/packages/Invisionware.Settings)
+
+Packages related to Invisionware Settings
+```powershell
+Install-Package Invisionware.Settings
+```
+
+Then just add the following using statement
 ```c#
 using Invisionware.Settings;
 ```
