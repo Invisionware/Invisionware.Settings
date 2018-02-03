@@ -13,6 +13,8 @@
 // ***********************************************************************
 
 using System;
+using System.Collections.Generic;
+using Invisionware.Settings.Overrides.AppConfig;
 
 namespace Invisionware.Settings
 {
@@ -26,14 +28,17 @@ namespace Invisionware.Settings
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="overrideConfiguration">The enrichment configuration.</param>
-		/// <returns>SettingsConfiguration&lt;T&gt;.</returns>
+		/// <param name="mappings">The mappings.</param>
+		/// <returns>
+		/// SettingsConfiguration&lt;T&gt;.
+		/// </returns>
+		/// <exception cref="ArgumentNullException">overrideConfiguration</exception>
 		/// <exception cref="System.ArgumentNullException">overrideConfiguration</exception>
-		public static SettingsConfiguration<T> WithhAppConfig<T>(this SettingsOverrideConfiguration<T> overrideConfiguration) where T : class, new()
+		public static SettingsConfiguration<T> WithhAppConfig<T>(this SettingsOverrideConfiguration<T> overrideConfiguration, IDictionary<string, Action<T, string>> mappings) where T : class, new()
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
 
-			//return overrideConfiguration.With(new AzureConfigurationManagerSettingsOverride<T>());
-			return null;
+			return overrideConfiguration.With(new AppConfigOverride<T>(mappings));
 		}
 	}
 }

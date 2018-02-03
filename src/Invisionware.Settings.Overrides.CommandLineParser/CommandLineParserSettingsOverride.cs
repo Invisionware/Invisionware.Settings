@@ -11,7 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace Invisionware.Settings.Override.CommandLineParser
+
+namespace Invisionware.Settings.Overrides.CommandLineParser
 {
 	/// <summary>
 	/// Class CommandLineParserSettingsOverride.

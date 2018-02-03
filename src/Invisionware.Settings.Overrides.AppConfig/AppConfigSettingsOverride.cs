@@ -11,7 +11,14 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace Invisionware.Settings.Override.AppConfig
+
+using System;
+using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Configuration;
+
+namespace Invisionware.Settings.Overrides.AppConfig
 {
 	/// <summary>
 	/// Class AppConfigOverride.
@@ -20,6 +27,22 @@ namespace Invisionware.Settings.Override.AppConfig
 	/// <seealso cref="ISettingsOverride{T}" />
 	public class AppConfigOverride<T> : ISettingsOverride<T>
 	{
+		public AppConfigOverride(IDictionary<string, Action<T, string>> mappings = null)
+		{
+			if (mappings == null) mappings = new ConcurrentDictionary<string, Action<T, string>>();
+
+			Mappings = mappings;
+		}
+
+		public IDictionary<string, Action<T, string>> Mappings { get; set; }
+
+		public AppConfigOverride<T> AddMapping(string appSettingsKeyName, Action<T, string> mapAction)
+		{
+			Mappings[appSettingsKeyName] = mapAction;
+
+			return this;
+		}
+
 		#region Implementation of ISettingsOverride<T>
 
 		/// <summary>
@@ -29,7 +52,10 @@ namespace Invisionware.Settings.Override.AppConfig
 		/// <exception cref="System.NotImplementedException"></exception>
 		public void Enrich(T settings)
 		{
-			throw new System.NotImplementedException();
+			foreach (var kvp in Mappings)
+			{
+				kvp.Value(settings, ConfigurationManager.AppSettings[kvp.Key]);
+			}
 		}
 
 		#endregion

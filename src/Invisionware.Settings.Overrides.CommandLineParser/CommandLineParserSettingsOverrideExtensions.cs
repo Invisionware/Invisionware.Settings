@@ -13,7 +13,7 @@
 // ***********************************************************************
 
 using System;
-using Invisionware.Settings.Override.CommandLineParser;
+using Invisionware.Settings.Overrides.CommandLineParser;
 
 namespace Invisionware.Settings
 {

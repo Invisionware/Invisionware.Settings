@@ -1,37 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
-		<id>Invisionware.Settings.Overrides.AppConfig</id>
+		<id>Invisionware.Settings.AppConfigSettings.SystemAppConfig</id>
 		<version>1.1.5-pre03</version>
-		<title>Invisionware.Settings.Overrides.AppConfig</title>
+		<title>Invisionware.Settings.AppConfigSettings.SystemAppConfig</title>
 		<authors>ravensorb</authors>
 		<owners>ravensorb</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Contains an implementation of a overrider for AppConfig for the Invisionware Settings Library</description>
-		<summary>Contains an implementation overriding settings from AppConfig.</summary>
+		<description>Contains an implementation of AppSettingsConfigManager for System ConfigurationManager for the Invisionware Settings Library</description>
+		<summary>Contains an implementation the AppSettingsConfigManager for System ConfigurationManager.</summary>
 		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
 		<releaseNotes></releaseNotes>
 		<copyright>(c) 2016 Invisionware</copyright>
 		<language>en-US</language>
-		<tags>invisionware settings appsettings config configuration</tags>
+		<tags>settings,appsettings,config,configuration,azure</tags>
 		<frameworkAssemblies>
 			<frameworkAssembly assemblyName="System.Configuration" />
 		</frameworkAssemblies>
 		<dependencies>
 			<group>
-				<dependency id="Newtonsoft.Json" version="9.0.1" />
 				<dependency id="Serilog" version="2.6.0" />
-				
+
 				<dependency id="Invisionware.Settings" version="1.1.5-pre03" />
-				<dependency id="Invisionware.Settings.AppConfigSettings.SystemAppConfig" version="1.1.5-pre03" />
 			</group>
 		</dependencies>
 	</metadata>
 	<files>
 		<!-- Framework: NetStandard1.1 -->
-		<file src="..\src\Invisionware.Settings.Overrides.AppConfig\bin\$Configuration$\Invisionware.Settings.Overrides.AppConfig.dll" target="lib\net46" />
-		<file src="..\src\Invisionware.Settings.Overrides.AppConfig\bin\$Configuration$\Invisionware.Settings.Overrides.AppConfig.pdb" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.SystemAppConfig.dll" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.SystemAppConfig.pdb" target="lib\net46" />
 
 	</files>
 </package>

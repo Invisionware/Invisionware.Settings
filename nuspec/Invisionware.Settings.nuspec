@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings</id>
-		<version>1.1.4</version>
+		<version>1.1.5-pre03</version>
 		<title>Invisionware.Settings</title>
 		<authors>ravensorb</authors>
 		<owners>ravensorb</owners>
@@ -17,7 +17,7 @@
 		<tags>invisionware settings appsettings config configuration</tags>
 		<dependencies>
 			<group>
-				<dependency id="Serilog" version="2.4.0" />
+				<dependency id="Serilog" version="2.6.0" />
 			</group>
 		</dependencies>
 	</metadata>

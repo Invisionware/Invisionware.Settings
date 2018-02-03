@@ -24,6 +24,32 @@ namespace Invisionware.Settings.Sinks
 	public static class AzureDocumentDbSettingsConfigurationExtensions
 	{
 		/// <summary>
+		/// Creates the Azures the file storage Configuiration object and loads the main settings form the config manager.
+		/// Keys:
+		///		settings:sink:AzureFileStorage:EndPointUri
+		///		settings:sink:AzureFileStorage:AuthorizationKey
+		///		settings:sink:AzureFileStorage:DatabaseName
+		///		settings:sink:AzureFileStorage:CollectionName
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="settingsConfig">The settings configuration.</param>
+		/// <param name="appConfigSettingsMgr">The configuration settings MGR.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentNullException">configSettingsMgr</exception>
+		public static SettingsConfiguration<T> AzureDocumentDb<T>(this SettingsWriterSinkConfiguration<T> settingsConfig, IAppConfigSettingsMgr appConfigSettingsMgr = null) where T : class, new()
+		{
+			if (appConfigSettingsMgr == null) appConfigSettingsMgr = AppConfigSettingsMgr.Current;
+			if (appConfigSettingsMgr == null) throw new ArgumentNullException(nameof(appConfigSettingsMgr));
+
+			return AzureDocumentDb(settingsConfig,
+				new Uri(appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:EndPointUri", string.Empty)),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:AuthorizationKey", string.Empty),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:DatabaseName", "AppSettings"),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:CollectionName", "Config") 
+			);
+		}
+
+		/// <summary>
 		/// Azures the document database.
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
@@ -57,6 +83,32 @@ namespace Invisionware.Settings.Sinks
 					maxVersions,
 					connectionProtocol, 
 					jsonSettings));
+		}
+
+		/// <summary>
+		/// Creates the Azures the file storage Configuiration object and loads the main settings form the config manager.
+		/// Keys:
+		///		settings:sink:AzureFileStorage:EndPointUri
+		///		settings:sink:AzureFileStorage:AuthorizationKey
+		///		settings:sink:AzureFileStorage:DatabaseName
+		///		settings:sink:AzureFileStorage:CollectionName
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="settingsConfig">The settings configuration.</param>
+		/// <param name="appConfigSettingsMgr">The configuration settings MGR.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentNullException">configSettingsMgr</exception>
+		public static SettingsConfiguration<T> AzureDocumentDb<T>(this SettingsReaderSinkConfiguration<T> settingsConfig, IAppConfigSettingsMgr appConfigSettingsMgr = null) where T : class, new()
+		{
+			if (appConfigSettingsMgr == null) appConfigSettingsMgr = AppConfigSettingsMgr.Current;
+			if (appConfigSettingsMgr == null) throw new ArgumentNullException(nameof(appConfigSettingsMgr));
+
+			return AzureDocumentDb(settingsConfig,
+				new Uri(appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:EndPointUri", string.Empty)),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:AuthorizationKey", string.Empty),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:DatabaseName", "AppSettings"),
+				appConfigSettingsMgr.GetValue("settings:sink:AzureDocumentDb:CollectionName", "Config")
+			);
 		}
 
 		/// <summary>

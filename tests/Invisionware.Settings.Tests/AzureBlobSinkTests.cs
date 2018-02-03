@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,7 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public void AzureBlobTest()
 		{
-			string connectionString =
-				"DefaultEndpointsProtocol=https;AccountName=invisionware;AccountKey=noiekQ2RFGjayhqqpD5roltTxRZMGnL2K3gI0VArGmFcixD/QT0/vC+xRIXMqL9YxorxmaYLRQrCI2u6YZCBsw==;EndpointSuffix=core.windows.net";
+			var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureBlob:ConnectionString"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureBlobStorage(connectionString).ReadFrom.AzureBlobStorage(connectionString);
 
@@ -50,8 +50,7 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public async Task AzureBlobTestAsync()
 		{
-			string connectionString =
-				"DefaultEndpointsProtocol=https;AccountName=invisionware;AccountKey=noiekQ2RFGjayhqqpD5roltTxRZMGnL2K3gI0VArGmFcixD/QT0/vC+xRIXMqL9YxorxmaYLRQrCI2u6YZCBsw==;EndpointSuffix=core.windows.net";
+			var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureBlob:ConnectionString"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureBlobStorage(connectionString).ReadFrom.AzureBlobStorage(connectionString);
 

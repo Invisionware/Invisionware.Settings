@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
-		<id>Invisionware.Settings.Overrides.AzureConfigurationManager</id>
+		<id>Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig</id>
 		<version>1.1.5-pre03</version>
-		<title>Invisionware.Settings.Overrides.AzureConfigurationManager</title>
+		<title>Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig</title>
 		<authors>ravensorb</authors>
 		<owners>ravensorb</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Contains an implementation of a overrider for AzureConfigurationManager for the Invisionware Settings Library</description>
-		<summary>Contains an implementation overriding settings from AzureConfigurationManager.</summary>
+		<description>Contains an implementation of AppSettingsConfigManager for AzureConfigurationManager for the Invisionware Settings Library</description>
+		<summary>Contains an implementation the AppSettingsConfigManager for AzureConfigurationManager.</summary>
 		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
 		<releaseNotes></releaseNotes>
 		<copyright>(c) 2016 Invisionware</copyright>
 		<language>en-US</language>
-		<tags>settings,appsettings,config,configuration</tags>
+		<tags>settings,appsettings,config,configuration,azure</tags>
 		<frameworkAssemblies>
 			<frameworkAssembly assemblyName="System.Configuration" />
 		</frameworkAssemblies>
@@ -24,14 +24,13 @@
 				<dependency id="Serilog" version="2.6.0" />
 				
 				<dependency id="Invisionware.Settings" version="1.1.5-pre03" />
-				<dependency id="Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig" version="1.1.5-pre03" />
 			</group>
 		</dependencies>
 	</metadata>
 	<files>
 		<!-- Framework: NetStandard1.1 -->
-		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\Invisionware.Settings.Overrides.AzureConfigurationManager.dll" target="lib\net46" />
-		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\Invisionware.Settings.Overrides.AzureConfigurationManager.pdb" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.dll" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.pdb" target="lib\net46" />
 
 	</files>
 </package>

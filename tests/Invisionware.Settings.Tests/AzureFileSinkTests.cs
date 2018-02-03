@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,7 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public void AzureFileTest()
 		{
-			string connectionString =
-				"DefaultEndpointsProtocol=https;AccountName=invisionware;AccountKey=noiekQ2RFGjayhqqpD5roltTxRZMGnL2K3gI0VArGmFcixD/QT0/vC+xRIXMqL9YxorxmaYLRQrCI2u6YZCBsw==;EndpointSuffix=core.windows.net";
+			var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureFile:ConnectionString"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureFileStorage(connectionString)
 				.ReadFrom.AzureFileStorage(connectionString);
@@ -51,8 +51,7 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public async Task AzureFileTestAsync()
 		{
-			string connectionString =
-				"DefaultEndpointsProtocol=https;AccountName=invisionware;AccountKey=noiekQ2RFGjayhqqpD5roltTxRZMGnL2K3gI0VArGmFcixD/QT0/vC+xRIXMqL9YxorxmaYLRQrCI2u6YZCBsw==;EndpointSuffix=core.windows.net";
+			var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureFile:ConnectionString"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureFileStorage(connectionString)
 				.ReadFrom.AzureFileStorage(connectionString);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,16 @@ namespace Invisionware.Settings.Tests
 	[Category("Settings.AzureDocumentDb")]
 	public class AzureDocumentDbSinkTests
 	{
+		public void AzureDocumentDbAppSettingsConstructor()
+		{
+			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureDocumentDb().ReadFrom.AzureDocumentDb();			
+		}
+
 		[Test]
 		public void AzureDocumentDbJsonSerializerTest()
 		{
-			var endPointUri = new Uri("https://invisionware.documents.azure.com:443/");
-			var authKey = "7m85dWuAbtDamU5WSgEZUFpNu42V97xMgNgWzSZrBzC6H1Ee2yXAgk4uePYoRGMlyb1OwRi5mhHwPSBSJcscsg==";
+			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"]; 
 
 			var jsonSettings = new JsonSerializerSettings()
 			{
@@ -58,8 +64,8 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public void AzureDocumentDbTest()
 		{
-			var endPointUri = new Uri("https://invisionware.documents.azure.com:443/");
-			var authKey = "7m85dWuAbtDamU5WSgEZUFpNu42V97xMgNgWzSZrBzC6H1Ee2yXAgk4uePYoRGMlyb1OwRi5mhHwPSBSJcscsg==";
+			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureDocumentDb(endPointUri, authKey).ReadFrom.AzureDocumentDb(endPointUri, authKey);
 
@@ -91,8 +97,8 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public async Task AzureDocumentDbTestAsync()
 		{
-			var endPointUri = new Uri("https://invisionware.documents.azure.com:443/");
-			var authKey = "7m85dWuAbtDamU5WSgEZUFpNu42V97xMgNgWzSZrBzC6H1Ee2yXAgk4uePYoRGMlyb1OwRi5mhHwPSBSJcscsg==";
+			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
 
 			var settingsConfig = new SettingsConfiguration<CustomSettings>().WriteTo.AzureDocumentDb(endPointUri, authKey).ReadFrom.AzureDocumentDb(endPointUri, authKey);
 
@@ -124,8 +130,8 @@ namespace Invisionware.Settings.Tests
 		[Test]
 		public async Task AzureDocumentDbMaxVersionsTest()
 		{
-			var endPointUri = new Uri("https://invisionware.documents.azure.com:443/");
-			var authKey = "7m85dWuAbtDamU5WSgEZUFpNu42V97xMgNgWzSZrBzC6H1Ee2yXAgk4uePYoRGMlyb1OwRi5mhHwPSBSJcscsg==";
+			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
 			var databaseName = "AppSettings";
 			var collectionName = "Config";
 			int maxVersions = 3;

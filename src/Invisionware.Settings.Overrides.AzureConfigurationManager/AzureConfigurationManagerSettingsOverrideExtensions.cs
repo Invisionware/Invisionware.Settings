@@ -13,8 +13,7 @@
 // ***********************************************************************
 
 using System;
-using Invisionware.Settings.Override.Azure;
-using Invisionware.Settings.Overrides;
+using Invisionware.Settings.Overrides.Azure;
 
 namespace Invisionware.Settings
 {
@@ -34,8 +33,7 @@ namespace Invisionware.Settings
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
 
-			//return overrideConfiguration.With(new AzureConfigurationManagerSettingsOverride<T>());
-			return null;
+			return overrideConfiguration.With(new AzureConfigurationManagerSettingsOverride<T>());
 		}
 	}
 }

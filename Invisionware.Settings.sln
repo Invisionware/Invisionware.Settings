@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{030783D5-8B49-446B-B4BD-623CE9C87C7E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{A31F0DBA-7B31-40C8-9887-2E51BD76D565}"
 	ProjectSection(SolutionItems) = preProject
+		nuspec\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.nuspec = nuspec\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.nuspec
+		nuspec\Invisionware.Settings.AppConfigSettings.SystemAppConfig.nuspec = nuspec\Invisionware.Settings.AppConfigSettings.SystemAppConfig.nuspec
 		nuspec\Invisionware.Settings.nuspec = nuspec\Invisionware.Settings.nuspec
 		nuspec\Invisionware.Settings.Overrides.AppConfig.nuspec = nuspec\Invisionware.Settings.Overrides.AppConfig.nuspec
 		nuspec\Invisionware.Settings.Overrides.AzureConfigurationManage.nuspec = nuspec\Invisionware.Settings.Overrides.AzureConfigurationManage.nuspec
@@ -19,9 +21,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".misc", ".misc", "{B67DBE97-2A64-4E27-8878-698FC381DABD}"
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
+		build.settings.json = build.settings.json
+		build.version.json = build.version.json
 		README.md = README.md
-		settings.json = settings.json
-		version.json = version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}"
@@ -68,6 +70,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureStorage", "AzureStorage", "{5C03CA30-9162-463D-A0A6-0FCE66402FD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonNet", "JsonNet", "{F5D6FDF6-9B21-44B7-BE85-5FB63C8E4642}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigManager", "ConfigManager", "{07C9BAA0-3C3E-4A49-971C-742E66C139A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.AppConfigSettings.SystemAppConfig", "src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\Invisionware.Settings.AppConfigSettings.SystemAppConfig.csproj", "{0182413D-8C14-4077-A436-D4A7CDC89871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig", "src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.csproj", "{BED287A0-684C-47FB-B477-702BF3FFCDBF}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -265,6 +273,38 @@ Global
 		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x64.Build.0 = Release|Any CPU
 		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x86.ActiveCfg = Release|Any CPU
 		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x86.Build.0 = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|ARM.Build.0 = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|x64.Build.0 = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|x86.Build.0 = Debug|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|ARM.Build.0 = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|x64.ActiveCfg = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|x64.Build.0 = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|x86.ActiveCfg = Release|Any CPU
+		{0182413D-8C14-4077-A436-D4A7CDC89871}.Release|x86.Build.0 = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|ARM.Build.0 = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|x64.Build.0 = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Debug|x86.Build.0 = Debug|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|ARM.Build.0 = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|x64.ActiveCfg = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|x64.Build.0 = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|x86.ActiveCfg = Release|Any CPU
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -289,5 +329,11 @@ Global
 		{4D00E526-4900-4C0E-9CCD-4DF259C48F55} = {EBDA1AB9-8272-462A-A0D2-1FDE39F390AA}
 		{5C03CA30-9162-463D-A0A6-0FCE66402FD4} = {EBDA1AB9-8272-462A-A0D2-1FDE39F390AA}
 		{F5D6FDF6-9B21-44B7-BE85-5FB63C8E4642} = {EBDA1AB9-8272-462A-A0D2-1FDE39F390AA}
+		{07C9BAA0-3C3E-4A49-971C-742E66C139A3} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
+		{0182413D-8C14-4077-A436-D4A7CDC89871} = {07C9BAA0-3C3E-4A49-971C-742E66C139A3}
+		{BED287A0-684C-47FB-B477-702BF3FFCDBF} = {07C9BAA0-3C3E-4A49-971C-742E66C139A3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAAAFC30-CE44-4F6C-A7F6-BA01692C20EE}
 	EndGlobalSection
 EndGlobal

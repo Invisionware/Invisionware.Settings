@@ -37,7 +37,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfigSettingsMgr.cs" />
     <Compile Include="EventArgs\SettingsEventArgs.cs" />
+    <Compile Include="Interfaces\IAppConfigSettingsMgr.cs" />
     <Compile Include="Interfaces\ISettingsReaderSink.cs" />
     <Compile Include="Interfaces\ISettingsSink.cs" />
     <Compile Include="Interfaces\ISettingsWriterSink.cs" />
@@ -64,9 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.2.4.0\lib\netstandard1.0\Serilog.dll</HintPath>
+      <HintPath>..\..\packages\Serilog.2.6.0\lib\netstandard1.0\Serilog.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
