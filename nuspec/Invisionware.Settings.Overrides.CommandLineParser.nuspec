@@ -2,17 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings.Overrides.CommandLineParser</id>
-		<version>1.1.5-pre03</version>
+		<version>1.1.5-pre04</version>
 		<title>Invisionware.Settings.Overrides.CommandLineParser</title>
-		<authors>ravensorb</authors>
-		<owners>ravensorb</owners>
+		<authors>Invisionware</authors>
+		<owners>Invisionware</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains an implementation of a overrider for CommandLineParser for the Invisionware Settings Library</description>
 		<summary>Contains an implementation overriding settings from CommandLineParser.</summary>
 		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
+		<iconUrl>https://github.com/Invisionware/Settings/raw/master/logo.png</iconUrl>
 		<releaseNotes></releaseNotes>
-		<copyright>(c) 2016 Invisionware</copyright>
+		<copyright>Copyright © 2018 Invisionware</copyright>
 		<language>en-US</language>
 		<tags>invisionware settings appsettings config configuration</tags>
 		<frameworkAssemblies>
@@ -24,7 +25,7 @@
 				<dependency id="Serilog" version="2.6.0" />
 				<dependency id="CommandLineParser" version="1.9.71" />
 				
-				<dependency id="Invisionware.Settings" version="1.1.5-pre03" />
+				<dependency id="Invisionware.Settings" version="1.1.5-pre04" />
 			</group>
 		</dependencies>
 	</metadata>

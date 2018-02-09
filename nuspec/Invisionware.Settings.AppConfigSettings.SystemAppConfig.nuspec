@@ -2,19 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings.AppConfigSettings.SystemAppConfig</id>
-		<version>1.1.5-pre03</version>
+		<version>1.1.5-pre04</version>
 		<title>Invisionware.Settings.AppConfigSettings.SystemAppConfig</title>
-		<authors>ravensorb</authors>
-		<owners>ravensorb</owners>
+		<authors>Invisionware</authors>
+		<owners>Invisionware</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains an implementation of AppSettingsConfigManager for System ConfigurationManager for the Invisionware Settings Library</description>
 		<summary>Contains an implementation the AppSettingsConfigManager for System ConfigurationManager.</summary>
 		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
+		<iconUrl>https://github.com/Invisionware/Settings/raw/master/logo.png</iconUrl>
 		<releaseNotes></releaseNotes>
-		<copyright>(c) 2016 Invisionware</copyright>
+		<copyright>Copyright © 2018 Invisionware</copyright>
 		<language>en-US</language>
-		<tags>settings,appsettings,config,configuration,azure</tags>
+		<tags>invisionware,settings,appsettings,config,configuration,azure</tags>
 		<frameworkAssemblies>
 			<frameworkAssembly assemblyName="System.Configuration" />
 		</frameworkAssemblies>
@@ -22,7 +23,7 @@
 			<group>
 				<dependency id="Serilog" version="2.6.0" />
 
-				<dependency id="Invisionware.Settings" version="1.1.5-pre03" />
+				<dependency id="Invisionware.Settings" version="1.1.5-pre04" />
 			</group>
 		</dependencies>
 	</metadata>
