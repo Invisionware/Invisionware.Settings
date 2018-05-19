@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings.Overrides.CommandLineParser</id>
-		<version>1.1.5-pre04</version>
+		<version>1.0.0</version>
 		<title>Invisionware.Settings.Overrides.CommandLineParser</title>
 		<authors>Invisionware</authors>
 		<owners>Invisionware</owners>
@@ -25,7 +25,7 @@
 				<dependency id="Serilog" version="2.6.0" />
 				<dependency id="CommandLineParser" version="1.9.71" />
 				
-				<dependency id="Invisionware.Settings" version="1.1.5-pre04" />
+				<dependency id="Invisionware.Settings" version="1.1.5" />
 			</group>
 		</dependencies>
 	</metadata>
