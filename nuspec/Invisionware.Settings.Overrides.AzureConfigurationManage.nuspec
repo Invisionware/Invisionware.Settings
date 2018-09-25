@@ -21,8 +21,8 @@
 		</frameworkAssemblies>
 		<dependencies>
 			<group>
-				<dependency id="Microsoft.WindowsAzure.ConfigurationManager" version="3.2.3" />
-				<dependency id="Serilog" version="2.6.0" />
+				<dependency id="Microsoft.WindowsAzure.ConfigurationManager" version="4.0.0" />
+				<dependency id="Serilog" version="2.7.1" />
 				
 				<dependency id="Invisionware.Settings" version="1.1.5" />
 				<dependency id="Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig" version="1.1.5" />
@@ -30,9 +30,9 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<!-- Framework: NetStandard1.1 -->
-		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\Invisionware.Settings.Overrides.AzureConfigurationManager.dll" target="lib\net46" />
-		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\Invisionware.Settings.Overrides.AzureConfigurationManager.pdb" target="lib\net46" />
+		<!-- Framework: NetStandard2.0 -->
+		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\netstandard2.0\Invisionware.Settings.Overrides.AzureConfigurationManager.dll" target="lib\netstandard2.0" />
+		<file src="..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\bin\$Configuration$\netstandard2.0\Invisionware.Settings.Overrides.AzureConfigurationManager.pdb" target="lib\netstandard2.0" />
 
 	</files>
 </package>

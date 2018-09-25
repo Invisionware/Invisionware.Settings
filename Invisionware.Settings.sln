@@ -33,27 +33,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{170B64
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings", "src\Invisionware.Settings\Invisionware.Settings.csproj", "{420941C7-45D7-482A-97D1-F12F0E4C0193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings", "src\Invisionware.Settings\Invisionware.Settings.csproj", "{420941C7-45D7-482A-97D1-F12F0E4C0193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Overrides.AppConfig", "src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj", "{C26548B1-BA0A-48B3-A1F6-466CD81BFD11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Overrides.AppConfig", "src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj", "{C26548B1-BA0A-48B3-A1F6-466CD81BFD11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Overrides.AzureConfigurationManager", "src\Invisionware.Settings.Overrides.AzureConfigurationManager\Invisionware.Settings.Overrides.AzureConfigurationManager.csproj", "{4C374FAD-F45E-454A-AA35-308DBBAE31EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Overrides.AzureConfigurationManager", "src\Invisionware.Settings.Overrides.AzureConfigurationManager\Invisionware.Settings.Overrides.AzureConfigurationManager.csproj", "{4C374FAD-F45E-454A-AA35-308DBBAE31EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.AzureStorage", "src\Invisionware.Settings.Sinks.AzureStorage\Invisionware.Settings.Sinks.AzureStorage.csproj", "{2470819F-0858-4219-9617-B39C010675D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.AzureStorage", "src\Invisionware.Settings.Sinks.AzureStorage\Invisionware.Settings.Sinks.AzureStorage.csproj", "{2470819F-0858-4219-9617-B39C010675D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.AzureDocumentDb", "src\Invisionware.Settings.Sinks.AzureDocumentDb\Invisionware.Settings.Sinks.AzureDocumentDb.csproj", "{86631200-8F6B-4FAC-8086-28017AC4E7A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.AzureDocumentDb", "src\Invisionware.Settings.Sinks.AzureDocumentDb\Invisionware.Settings.Sinks.AzureDocumentDb.csproj", "{86631200-8F6B-4FAC-8086-28017AC4E7A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Tests", "tests\Invisionware.Settings.Tests\Invisionware.Settings.Tests.csproj", "{395B3D75-6D59-42C4-9839-D81EE6160411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Tests", "tests\Invisionware.Settings.Tests\Invisionware.Settings.Tests.csproj", "{395B3D75-6D59-42C4-9839-D81EE6160411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.JsonNet", "src\Invisionware.Settings.Sinks.JsonNet\Invisionware.Settings.Sinks.JsonNet.csproj", "{52B59E7D-507D-49C5-A34B-62E1B9F25A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.JsonNet", "src\Invisionware.Settings.Sinks.JsonNet\Invisionware.Settings.Sinks.JsonNet.csproj", "{52B59E7D-507D-49C5-A34B-62E1B9F25A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Overrides.CommandLineParser", "src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj", "{10E2553A-9CB0-47C9-8907-6C5C80E10FC9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.AzureDocumentDb.NetStandard", "src\Invisionware.Settings.Sinks.AzureDocumentDb.NetStandard\Invisionware.Settings.Sinks.AzureDocumentDb.NetStandard.csproj", "{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.AzureStorage.NetStandard", "src\Invisionware.Settings.Sinks.AzureStorage.NetStandard\Invisionware.Settings.Sinks.AzureStorage.NetStandard.csproj", "{361D7A3B-E69E-4690-A242-8E948DFCEE30}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.JsonNet.NetStandard", "src\Invisionware.Settings.Sinks.JsonNet.NetStandard\Invisionware.Settings.Sinks.JsonNet.NetStandard.csproj", "{00C97C3F-9048-4F33-A613-977DF5A09B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Overrides.CommandLineParser", "src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj", "{10E2553A-9CB0-47C9-8907-6C5C80E10FC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sinks", "Sinks", "{EBDA1AB9-8272-462A-A0D2-1FDE39F390AA}"
 EndProject
@@ -73,9 +67,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonNet", "JsonNet", "{F5D6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigManager", "ConfigManager", "{07C9BAA0-3C3E-4A49-971C-742E66C139A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.AppConfigSettings.SystemAppConfig", "src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\Invisionware.Settings.AppConfigSettings.SystemAppConfig.csproj", "{0182413D-8C14-4077-A436-D4A7CDC89871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.AppConfigSettings.SystemAppConfig", "src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\Invisionware.Settings.AppConfigSettings.SystemAppConfig.csproj", "{0182413D-8C14-4077-A436-D4A7CDC89871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig", "src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.csproj", "{BED287A0-684C-47FB-B477-702BF3FFCDBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig", "src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.csproj", "{BED287A0-684C-47FB-B477-702BF3FFCDBF}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -225,54 +219,6 @@ Global
 		{10E2553A-9CB0-47C9-8907-6C5C80E10FC9}.Release|x64.Build.0 = Release|Any CPU
 		{10E2553A-9CB0-47C9-8907-6C5C80E10FC9}.Release|x86.ActiveCfg = Release|Any CPU
 		{10E2553A-9CB0-47C9-8907-6C5C80E10FC9}.Release|x86.Build.0 = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|ARM.Build.0 = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|x64.Build.0 = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Debug|x86.Build.0 = Debug|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|ARM.ActiveCfg = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|ARM.Build.0 = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|x64.ActiveCfg = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|x64.Build.0 = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|x86.ActiveCfg = Release|Any CPU
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85}.Release|x86.Build.0 = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|ARM.Build.0 = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|x64.Build.0 = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Debug|x86.Build.0 = Debug|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|ARM.ActiveCfg = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|ARM.Build.0 = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|x64.ActiveCfg = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|x64.Build.0 = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|x86.ActiveCfg = Release|Any CPU
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30}.Release|x86.Build.0 = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|ARM.Build.0 = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|x64.Build.0 = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Debug|x86.Build.0 = Debug|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|ARM.ActiveCfg = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|ARM.Build.0 = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x64.ActiveCfg = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x64.Build.0 = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x86.ActiveCfg = Release|Any CPU
-		{00C97C3F-9048-4F33-A613-977DF5A09B54}.Release|x86.Build.0 = Release|Any CPU
 		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0182413D-8C14-4077-A436-D4A7CDC89871}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -318,9 +264,6 @@ Global
 		{395B3D75-6D59-42C4-9839-D81EE6160411} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{52B59E7D-507D-49C5-A34B-62E1B9F25A85} = {F5D6FDF6-9B21-44B7-BE85-5FB63C8E4642}
 		{10E2553A-9CB0-47C9-8907-6C5C80E10FC9} = {8D0B2FDE-4C03-437C-82AE-090FC5B18D0B}
-		{B0104221-53C7-4E5E-AC9F-BB50FAA72C85} = {4D00E526-4900-4C0E-9CCD-4DF259C48F55}
-		{361D7A3B-E69E-4690-A242-8E948DFCEE30} = {5C03CA30-9162-463D-A0A6-0FCE66402FD4}
-		{00C97C3F-9048-4F33-A613-977DF5A09B54} = {F5D6FDF6-9B21-44B7-BE85-5FB63C8E4642}
 		{EBDA1AB9-8272-462A-A0D2-1FDE39F390AA} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
 		{8D0B2FDE-4C03-437C-82AE-090FC5B18D0B} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
 		{29018031-D019-4CB6-846B-CC4DB5030F99} = {4D00E526-4900-4C0E-9CCD-4DF259C48F55}

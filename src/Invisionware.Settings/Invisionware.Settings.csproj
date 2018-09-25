@@ -1,73 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{420941C7-45D7-482A-97D1-F12F0E4C0193}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Invisionware.Settings</RootNamespace>
-    <AssemblyName>Invisionware.Settings</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="packages.config" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="Serilog" Version="2.7.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppConfigSettingsMgr.cs" />
-    <Compile Include="EventArgs\SettingsEventArgs.cs" />
-    <Compile Include="Interfaces\IAppConfigSettingsMgr.cs" />
-    <Compile Include="Interfaces\ISettingsReaderSink.cs" />
-    <Compile Include="Interfaces\ISettingsSink.cs" />
-    <Compile Include="Interfaces\ISettingsWriterSink.cs" />
-    <Compile Include="Overrides\SettingsActionOverrideExtensions.cs" />
-    <Compile Include="Interfaces\ISettings.cs" />
-    <Compile Include="Interfaces\ISettingsConfiguration.cs" />
-    <Compile Include="Interfaces\ISettingsOverride.cs" />
-    <Compile Include="Interfaces\ISettingsMgr.cs" />
-    <Compile Include="Interfaces\ISettingsReaderSinkAsync.cs" />
-    <Compile Include="Interfaces\ISettingsWriterSinkAsync.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\AssemblyInfo.Shared.cs">
-      <Link>Properties\AssemblyInfo.Shared.cs</Link>
-    </Compile>
-    <Compile Include="Overrides\SettingsActionOverride.cs" />
-    <Compile Include="SettingsConfiguration.cs" />
-    <Compile Include="Configuration\SettingsOverrideConfiguration.cs" />
-    <Compile Include="SettingsMgr.cs" />
-    <Compile Include="Configuration\SettingsReaderSinkConfiguration.cs" />
-    <Compile Include="Configuration\SettingsSinkConfiguration.cs" />
-    <Compile Include="Configuration\SettingsWriterSinkConfiguration.cs" />
-    <Compile Include="Sinks\MemorySinkConfigurationExtensions.cs" />
-    <Compile Include="Sinks\MemorySink.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.2.6.0\lib\netstandard1.0\Serilog.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+
 </Project>

@@ -18,18 +18,15 @@
 		<tags>invisionware settings appsettings config configuration</tags>
 		<dependencies>
 			<group>
-				<dependency id="Serilog" version="2.6.0" />
+				<dependency id="Microsoft.CSharp" version="4.5.0" />
+				<dependency id="Serilog" version="2.7.1" />
 			</group>
 		</dependencies>
 	</metadata>
 	<files>
-		<!-- Framework: PCL -->
-		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.dll" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
-		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.pdb" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
-
-		<!-- Framework: NetStandard1.1 -->
-		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.dll" target="lib\netstandard1.1" />
-		<file src="..\src\Invisionware.Settings\bin\$Configuration$\Invisionware.Settings.pdb" target="lib\netstandard1.1" />
+		<!-- Framework: NetStandard2.0 -->
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\netstandard2.0\Invisionware.Settings.dll" target="lib\netstandard2.0" />
+		<file src="..\src\Invisionware.Settings\bin\$Configuration$\netstandard2.0\Invisionware.Settings.pdb" target="lib\netstandard2.0" />
 
 	</files>
 </package>

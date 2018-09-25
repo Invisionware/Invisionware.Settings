@@ -21,7 +21,8 @@
 		</frameworkAssemblies>
 		<dependencies>
 			<group>
-				<dependency id="Serilog" version="2.6.0" />
+				<dependency id="Serilog" version="2.7.1" />
+				<dependency id="System.Configuration.ConfigurationManager" version="4.5.0" />
 
 				<dependency id="Invisionware.Settings" version="1.1.5" />
 			</group>
@@ -29,8 +30,8 @@
 	</metadata>
 	<files>
 		<!-- Framework: NetStandard1.1 -->
-		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.SystemAppConfig.dll" target="lib\net46" />
-		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\Invisionware.Settings.AppConfigSettings.SystemAppConfig.pdb" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\netstandard2.0\Invisionware.Settings.AppConfigSettings.SystemAppConfig.dll" target="lib\net46" />
+		<file src="..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\bin\$Configuration$\netstandard2.0\Invisionware.Settings.AppConfigSettings.SystemAppConfig.pdb" target="lib\net46" />
 
 	</files>
 </package>
