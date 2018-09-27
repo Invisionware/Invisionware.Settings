@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings.Overrides.CommandLineParser</id>
-		<version>1.1.5</version>
+		<version>1.1.6</version>
 		<title>Invisionware.Settings.Overrides.CommandLineParser</title>
 		<authors>Invisionware</authors>
 		<owners>Invisionware</owners>
+		<projectUrl>https://github.com/Invisionware/Invisionware.Settings</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</licenseUrl>
+		<iconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains an implementation of a overrider for CommandLineParser for the Invisionware Settings Library</description>
 		<summary>Contains an implementation overriding settings from CommandLineParser.</summary>
-		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
-		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
-		<iconUrl>https://github.com/Invisionware/Settings/raw/master/logo.png</iconUrl>
 		<releaseNotes></releaseNotes>
 		<copyright>Copyright © 2018 Invisionware</copyright>
 		<language>en-US</language>

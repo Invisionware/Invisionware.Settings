@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Settings</id>
-		<version>1.1.5</version>
+		<version>1.1.6</version>
 		<title>Invisionware.Settings</title>
 		<authors>Invisionware</authors>
 		<owners>Invisionware</owners>
+		<projectUrl>https://github.com/Invisionware/Invisionware.Settings</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</licenseUrl>
+		<iconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Contains a generalize implementation for handling complex configuration/settings within an application.  Based off the design of Serilog</description>
 		<summary>Contains a generalize implementation for handling complex configuration/settings within an application.</summary>
-		<projectUrl>https://github.com/Invisionware/Settings</projectUrl>
-		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Settings/master/LICENSE</licenseUrl>
-		<iconUrl>https://github.com/Invisionware/Settings/raw/master/logo.png</iconUrl>
 		<releaseNotes></releaseNotes>
 		<copyright>Copyright © 2018 Invisionware</copyright>
 		<language>en-US</language>
@@ -20,6 +20,8 @@
 			<group>
 				<dependency id="Microsoft.CSharp" version="4.5.0" />
 				<dependency id="Serilog" version="2.7.1" />
+
+				<dependency id="Invisionware.Core" version="1.0.0" />
 			</group>
 		</dependencies>
 	</metadata>
