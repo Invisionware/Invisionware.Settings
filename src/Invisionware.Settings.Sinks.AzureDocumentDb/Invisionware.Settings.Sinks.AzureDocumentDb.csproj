@@ -1,18 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
-  </ItemGroup>
-
-  <Import Project="..\Invisionware.Settings.Sinks.AzureDocumentDb.Shared\Invisionware.Settings.Sinks.AzureDocumentDb.Shared.projitems" Label="Shared" />
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>Invisionware.Settings.Sinks.AzureDocumentDb</PackageId>
+		<Authors>Invisionware</Authors>
+		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
+		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</PackageLicenseUrl>
+		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
+		<Description>Contains an implementation of a Reader/Write sink for AzureDocumentDb for the Invisionware Settings Library</Description>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<Copyright>Copyright © 2018 Invisionware</Copyright>
+		<PackageTags>invisionware settings azure documentdb config configuration</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
+	</ItemGroup>
+	<Import Project="..\Invisionware.Settings.Sinks.AzureDocumentDb.Shared\Invisionware.Settings.Sinks.AzureDocumentDb.Shared.projitems" Label="Shared" />
 </Project>

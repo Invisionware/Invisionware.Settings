@@ -1,17 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="WindowsAzure.Storage" Version="9.3.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
-  </ItemGroup>
-
-  <Import Project="..\Invisionware.Settings.Sinks.AzureStorage.Shared\Invisionware.Settings.Sinks.AzureStorage.Shared.projitems" Label="Shared" />
-  
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>Invisionware.Settings.Sinks.AzureStorage</PackageId>
+		<Authors>Invisionware</Authors>
+		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
+		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</PackageLicenseUrl>
+		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
+		<Description>Contains an implementation of a Reader/Write sink for Azure Blob and File Storage for the Invisionware Settings Library</Description>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<Copyright>Copyright © 2018 Invisionware</Copyright>
+		<PackageTags>invisionware settings azure blob file config configuration</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="WindowsAzure.Storage" Version="9.3.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
+	</ItemGroup>
+	<Import Project="..\Invisionware.Settings.Sinks.AzureStorage.Shared\Invisionware.Settings.Sinks.AzureStorage.Shared.projitems" Label="Shared" />
 </Project>

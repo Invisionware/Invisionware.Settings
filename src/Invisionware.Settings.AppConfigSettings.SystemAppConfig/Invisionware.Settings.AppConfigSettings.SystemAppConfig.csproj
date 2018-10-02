@@ -1,16 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.7.1" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
-  </ItemGroup>
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>Invisionware.Settings.AppConfigSettings.SystemAppConfig</PackageId>
+		<Authors>Invisionware</Authors>
+		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
+		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</PackageLicenseUrl>
+		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
+		<Description>Contains an implementation of AppSettingsConfigManager for System ConfigurationManager for the Invisionware Settings Library</Description>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<Copyright>Copyright © 2018 Invisionware</Copyright>
+		<PackageTags>invisionware,settings,appsettings,config,configuration,azure</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog" Version="2.7.1" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
+	</ItemGroup>
 </Project>
