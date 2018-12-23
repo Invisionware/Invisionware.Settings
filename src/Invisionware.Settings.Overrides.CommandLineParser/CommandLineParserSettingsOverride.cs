@@ -21,21 +21,23 @@ namespace Invisionware.Settings.Overrides.CommandLineParser
 	/// <seealso cref="ISettingsOverride{T}" />
 	public class CommandLineParserSettingsOverride<T> : ISettingsOverride<T>
 	{
-		/// <summary>
-		/// The command line
-		/// </summary>
-		private string _commandLine;
-		/// <summary>
-		/// The arguments
-		/// </summary>
-		private string[] _args;
+#pragma warning disable IDE0052 // Remove unread private members
+                               /// <summary>
+                               /// The command line
+                               /// </summary>
+        private readonly string _commandLine;
+                               /// <summary>
+                               /// The arguments
+                               /// </summary>
+        private readonly string[] _args;
+#pragma warning restore IDE0052 // Remove unread private members
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="CommandLineParserSettingsOverride{T}"/> class.
-		/// </summary>
-		/// <param name="commandLine">The command line.</param>
-		/// <param name="args">The arguments.</param>
-		public CommandLineParserSettingsOverride(string commandLine, string[] args)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommandLineParserSettingsOverride{T}"/> class.
+        /// </summary>
+        /// <param name="commandLine">The command line.</param>
+        /// <param name="args">The arguments.</param>
+        public CommandLineParserSettingsOverride(string commandLine, string[] args)
 		{
 			_commandLine = commandLine;
 			_args = args;

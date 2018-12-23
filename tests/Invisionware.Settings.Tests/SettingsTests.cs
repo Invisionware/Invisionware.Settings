@@ -1,10 +1,6 @@
 ﻿using FluentAssertions;
 using Invisionware.Settings.Sinks;
-using Microsoft.Azure.Documents.Client;
 using NUnit.Framework;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Invisionware.Settings.Tests
 {

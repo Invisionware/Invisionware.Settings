@@ -4,7 +4,7 @@
 		<PackageId>Invisionware.Settings.Sinks.AzureStorage</PackageId>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
-		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</PackageLicenseUrl>
+		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains an implementation of a Reader/Write sink for Azure Blob and File Storage for the Invisionware Settings Library</Description>
 		<PackageReleaseNotes></PackageReleaseNotes>
@@ -13,7 +13,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="WindowsAzure.Storage" Version="9.3.2" />
+		<PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />

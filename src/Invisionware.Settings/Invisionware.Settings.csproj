@@ -4,7 +4,7 @@
 		<PackageId>Invisionware.Settings</PackageId>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
-		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Settings/master/LICENSE</PackageLicenseUrl>
+		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains a generalize implementation for handling complex configuration/settings within an application.  Based off the design of Serilog</Description>
 		<PackageReleaseNotes></PackageReleaseNotes>

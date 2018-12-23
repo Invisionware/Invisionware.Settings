@@ -1,27 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="5.4.2" />
-    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.0" />
-    <PackageReference Include="nunit" Version="3.10.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="FluentAssertions" Version="5.5.3" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.2.0" />
+    <PackageReference Include="nunit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\Invisionware.Settings.AppConfigSettings.SystemAppConfig.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj" />
     <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\Invisionware.Settings.Overrides.AzureConfigurationManager.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj" />
     <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureDocumentDb\Invisionware.Settings.Sinks.AzureDocumentDb.csproj" />
     <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureStorage\Invisionware.Settings.Sinks.AzureStorage.csproj" />
+    <ProjectReference Include="..\..\src\Invisionware.Settings.AppConfigSettings.SystemAppConfig\Invisionware.Settings.AppConfigSettings.SystemAppConfig.csproj" />
+    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj" />
+    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj" />
     <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.JsonNet\Invisionware.Settings.Sinks.JsonNet.csproj" />
     <ProjectReference Include="..\..\src\Invisionware.Settings\Invisionware.Settings.csproj" />
   </ItemGroup>

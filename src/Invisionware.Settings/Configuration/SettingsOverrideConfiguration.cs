@@ -43,11 +43,8 @@ namespace Invisionware.Settings
 			SettingsConfiguration<T> settingsConfiguration,
 			Action<ISettingsOverride<T>> addOverride)
 		{
-			if (settingsConfiguration == null) throw new ArgumentNullException(nameof(settingsConfiguration));
-			if (addOverride == null) throw new ArgumentNullException(nameof(addOverride));
-
-			_settingsConfiguration = settingsConfiguration;
-			_addOverride = addOverride;
+            _settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
+			_addOverride = addOverride ?? throw new ArgumentNullException(nameof(addOverride));
 		}
 
 		/// <summary>
