@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackageId>Invisionware.Settings.Overrides.AppConfig</PackageId>
@@ -7,14 +8,16 @@
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains an implementation of a overrider for AppConfig for the Invisionware Settings Library</Description>
-		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageReleaseNotes/>
 		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<PackageTags>invisionware settings appsettings config configuration</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
 	</ItemGroup>

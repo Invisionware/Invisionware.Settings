@@ -8,7 +8,7 @@
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains an implementation of Sink Read/Write for AzureConfigurationManager for the Invisionware Settings Library</Description>
-		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageReleaseNotes/>
 		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<PackageTags>settings,appsettings,config,configuration,azure</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

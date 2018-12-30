@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackageId>Invisionware.Settings</PackageId>
@@ -7,16 +8,18 @@
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains a generalize implementation for handling complex configuration/settings within an application.  Based off the design of Serilog</Description>
-		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageReleaseNotes/>
 		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<PackageTags>invisionware settings appsettings config configuration</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+	
 	<ItemGroup>
-	  <Compile Remove="AppConfigSettingsMgr.cs" />
-	  <Compile Remove="Interfaces\IAppConfigSettingsMgr.cs" />
-	  <Compile Remove="Interfaces\ISettings.cs" />
+		<Compile Remove="AppConfigSettingsMgr.cs" />
+		<Compile Remove="Interfaces\IAppConfigSettingsMgr.cs" />
+		<Compile Remove="Interfaces\ISettings.cs" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
 		<PackageReference Include="Serilog" Version="2.7.1" />

@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<TargetFramework>net461</TargetFramework>
 		<PackageId>Invisionware.Settings.Overrides.AzureConfigurationManager</PackageId>
@@ -7,14 +8,16 @@
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains an implementation of a overrider for AzureConfigurationManager for the Invisionware Settings Library</Description>
-		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageReleaseNotes/>
 		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<PackageTags>settings,appsettings,config,configuration</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Azure.ConfigurationManager" Version="4.0.0" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
 	</ItemGroup>
