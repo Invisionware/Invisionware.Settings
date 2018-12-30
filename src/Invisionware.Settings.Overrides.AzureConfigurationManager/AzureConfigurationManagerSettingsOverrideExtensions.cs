@@ -13,6 +13,7 @@
 // ***********************************************************************
 
 using System;
+using System.Collections.Generic;
 using Invisionware.Settings.Overrides.Azure;
 
 namespace Invisionware.Settings
@@ -29,11 +30,12 @@ namespace Invisionware.Settings
 		/// <param name="overrideConfiguration">The override configuration.</param>
 		/// <returns>SettingsConfiguration&lt;T&gt;.</returns>
 		/// <exception cref="System.ArgumentNullException">overrideConfiguration</exception>
-		public static SettingsConfiguration<T> WithAzureConfigurationManager<T>(this SettingsOverrideConfiguration<T> overrideConfiguration) where T : class, new()
+		public static SettingsConfiguration WithAzureConfigurationManager<T>(this SettingsOverrideConfiguration overrideConfiguration, IDictionary<string, Func<string, object, object>> mappings) where T : class, new()
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
 
-			return overrideConfiguration.With(new AzureConfigurationManagerSettingsOverride<T>());
+			return overrideConfiguration.With(new AzureConfigurationManagerSettingsOverride(mappings));
+		
 		}
 	}
 }

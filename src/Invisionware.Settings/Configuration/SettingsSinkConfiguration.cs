@@ -21,12 +21,12 @@ namespace Invisionware.Settings
 	/// </summary>
 	/// <typeparam name="TSetting">The type of the t setting.</typeparam>
 	/// <typeparam name="TSink">The type of the t sink.</typeparam>
-	public class SettingsSinkConfiguration<TSetting, TSink> where TSetting : class, new()
+	public class SettingsSinkConfiguration<TSink>
 	{
 		/// <summary>
 		/// The settings configuration
 		/// </summary>
-		private readonly SettingsConfiguration<TSetting> _settingsConfiguration;
+		private readonly SettingsConfiguration _settingsConfiguration;
 		/// <summary>
 		/// The add sink
 		/// </summary>
@@ -42,9 +42,9 @@ namespace Invisionware.Settings
 		/// or
 		/// addSink
 		/// </exception>
-		internal SettingsSinkConfiguration(SettingsConfiguration<TSetting> settingsConfiguration, Action<TSink> addSink)
+		internal SettingsSinkConfiguration(SettingsConfiguration settingsConfiguration, Action<TSink> addSink)
 		{
-            _settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
+			_settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
 			_addSink = addSink ?? throw new ArgumentNullException(nameof(addSink));
 		}
 
@@ -53,7 +53,7 @@ namespace Invisionware.Settings
 		/// </summary>
 		/// <param name="settingsSink">The settings sink.</param>
 		/// <returns>SettingsConfiguration.</returns>
-		public SettingsConfiguration<TSetting> Sink(
+		public SettingsConfiguration Sink(
 			TSink settingsSink)
 		{
 			var sink = settingsSink;
@@ -63,10 +63,10 @@ namespace Invisionware.Settings
 			return _settingsConfiguration;
 		}
 
-		public static SettingsConfiguration<TSetting> Wrap(
-			SettingsReaderSinkConfiguration<TSetting> settingsSinkConfiguration,
+		public static SettingsConfiguration Wrap(
+			SettingsReaderSinkConfiguration settingsSinkConfiguration,
 			Func<ISettingsReaderSink, ISettingsReaderSink> wrapSink,
-			Action<SettingsReaderSinkConfiguration<TSetting>> configureWrappedSink)
+			Action<SettingsReaderSinkConfiguration> configureWrappedSink)
 		{
 			if (settingsSinkConfiguration == null) throw new ArgumentNullException(nameof(settingsSinkConfiguration));
 			if (wrapSink == null) throw new ArgumentNullException(nameof(wrapSink));
@@ -86,7 +86,7 @@ namespace Invisionware.Settings
 				settingsSinkConfiguration.Sink(wrappedSink);
 			}
 
-			var capturingSettingsSinkConfiguration = new SettingsReaderSinkConfiguration<TSetting>(
+			var capturingSettingsSinkConfiguration = new SettingsReaderSinkConfiguration(
 				settingsSinkConfiguration._settingsConfiguration,
 				WrapAndAddSink);
 

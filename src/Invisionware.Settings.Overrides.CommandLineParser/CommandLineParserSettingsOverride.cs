@@ -17,9 +17,8 @@ namespace Invisionware.Settings.Overrides.CommandLineParser
 	/// <summary>
 	/// Class CommandLineParserSettingsOverride.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	/// <seealso cref="ISettingsOverride{T}" />
-	public class CommandLineParserSettingsOverride<T> : ISettingsOverride<T>
+	/// <seealso cref="ISettingsOverride" />
+	public class CommandLineParserSettingsOverride : ISettingsValueOverride
 	{
 #pragma warning disable IDE0052 // Remove unread private members
                                /// <summary>
@@ -48,9 +47,10 @@ namespace Invisionware.Settings.Overrides.CommandLineParser
 		/// <summary>
 		/// Enriches the specified settings.
 		/// </summary>
-		/// <param name="settings">The settings.</param>
+		/// <param name="parameter">The parameter name.</param>
+		/// <param name="value">The settings.</param>
 		/// <exception cref="System.NotImplementedException"></exception>
-		public void Enrich(T settings)
+		public T Enrich<T>(string paramater, T value)
 		{
 			throw new System.NotImplementedException();
 		}

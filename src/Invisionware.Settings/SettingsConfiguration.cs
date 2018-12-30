@@ -22,7 +22,7 @@ namespace Invisionware.Settings
 	/// Class SettingsConfiguration.
 	/// </summary>
 	/// <seealso cref="Invisionware.Settings.ISettingsConfiguration" />
-	public class SettingsConfiguration<T> : ISettingsConfiguration where T : class, new()
+	public class SettingsConfiguration : ISettingsConfiguration
 	{
 		#region Member Variables
 		/// <summary>
@@ -42,12 +42,12 @@ namespace Invisionware.Settings
 		/// <summary>
 		/// The override readers
 		/// </summary>
-		private readonly List<ISettingsOverride<T>> _overrideReaders = new List<ISettingsOverride<T>>();
+		private readonly List<ISettingsOverride> _overrideReaders = new List<ISettingsOverride>();
 
 		/// <summary>
 		/// The overrides writer
 		/// </summary>
-		private readonly List<ISettingsOverride<T>> _overridesWriter = new List<ISettingsOverride<T>>();
+		private readonly List<ISettingsOverride> _overridesWriter = new List<ISettingsOverride>();
 		#endregion Member Variables
 
 		#region Public Properties
@@ -55,24 +55,24 @@ namespace Invisionware.Settings
 		/// Gets the write to.
 		/// </summary>
 		/// <value>The write to.</value>
-		public SettingsWriterSinkConfiguration<T> WriteTo => new SettingsWriterSinkConfiguration<T>(this, s => _settingsWriterSink = s);
+		public SettingsWriterSinkConfiguration WriteTo => new SettingsWriterSinkConfiguration(this, s => _settingsWriterSink = s);
 		/// <summary>
 		/// Gets the read from.
 		/// </summary>
 		/// <value>The read from.</value>
-		public SettingsReaderSinkConfiguration<T> ReadFrom => new SettingsReaderSinkConfiguration<T>(this, s => _settingsReaderSink = s);
+		public SettingsReaderSinkConfiguration ReadFrom => new SettingsReaderSinkConfiguration(this, s => _settingsReaderSink = s);
 
 		/// <summary>
 		/// Gets the enrich.
 		/// </summary>
 		/// <value>The enrich.</value>
-		public SettingsOverrideConfiguration<T> ReaderOverrides => new SettingsOverrideConfiguration<T>(this, e => _overrideReaders.Add(e));
+		public SettingsOverrideConfiguration ReaderOverrides => new SettingsOverrideConfiguration(this, e => _overrideReaders.Add(e));
 
 		/// <summary>
 		/// Gets the enrich.
 		/// </summary>
 		/// <value>The enrich.</value>
-		public SettingsOverrideConfiguration<T> WriterOverrides => new SettingsOverrideConfiguration<T>(this, e => _overridesWriter.Add(e));
+		public SettingsOverrideConfiguration WriterOverrides => new SettingsOverrideConfiguration(this, e => _overridesWriter.Add(e));
 		#endregion Public Properties
 
 		#region Event Handlers
@@ -88,30 +88,33 @@ namespace Invisionware.Settings
 		public EventHandler<SettingsSavingEventArgs> OnSettingsSaving { get; set; }
 		#endregion Event Handlers
 
+		public ISettingsMgr CreateSettingsMgr() { return CreateSettingsMgr<ISettingsMgr>(); }
 
 		/// <summary>
 		/// Creates the settings MGR.
 		/// </summary>
 		/// <returns>ISettingsMgr.</returns>
 		/// <exception cref="System.InvalidOperationException">CreateSettingsMgr() was previously called and can only be called once.</exception>
-		public ISettingsMgr<T> CreateSettingsMgr()
+		public TSettingsMgr CreateSettingsMgr<TSettingsMgr>() where TSettingsMgr : ISettingsMgr
 		{
 			if (_settingsMgrCreated)
 				throw new InvalidOperationException("CreateSettingsMgr() was previously called and can only be called once.");
 
 			_settingsMgrCreated = true;
 
-			if (OnSettingsLoading != null)
+			if (OnSettingsLoading != null && _settingsReaderSink != null)
 			{
-				_settingsReaderSink.OnSettingsLoading += OnSettingsLoading;
+				_settingsReaderSink.OnSettingsRead += OnSettingsLoading;
 			}
 
-			if (OnSettingsSaving != null)
+			if (OnSettingsSaving != null && _settingsWriterSink != null)
 			{
-				_settingsWriterSink.OnSettingsSaving += OnSettingsSaving;
+				_settingsWriterSink.OnSettingsWritting += OnSettingsSaving;
 			}
 
-			return new SettingsMgr<T>(_settingsReaderSink, _settingsWriterSink, _overrideReaders, _overridesWriter);
+			ISettingsMgr obj = new SettingsManagerWrapper(_settingsReaderSink, _settingsWriterSink, _overrideReaders, _overridesWriter);
+
+			return (TSettingsMgr)obj;
 		}
 
 	}

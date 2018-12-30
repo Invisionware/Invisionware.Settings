@@ -24,16 +24,16 @@ namespace Invisionware.Settings
 		/// <summary>
 		/// Withes the action.
 		/// </summary>
-		/// <typeparam name="T"></typeparam>
+		/// <typeparam name="TSettingsClass"></typeparam>
 		/// <param name="overrideConfiguration">The enrichment configuration.</param>
 		/// <param name="action">The action.</param>
 		/// <returns>SettingsConfiguration&lt;T&gt;.</returns>
 		/// <exception cref="System.ArgumentNullException">overrideConfiguration</exception>
-		public static SettingsConfiguration<T> WithAction<T>(
-			this SettingsOverrideConfiguration<T> overrideConfiguration, Action<T> action) where T : class, new()
+		public static SettingsConfiguration WithAction<TSettingsClass>(
+			this SettingsOverrideConfiguration overrideConfiguration, Func<TSettingsClass, TSettingsClass> action) where TSettingsClass : class, new()
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
-			return overrideConfiguration.With(new SettingsOverrideAction<T>(action));
+			return overrideConfiguration.With(new SettingsOverrideAction<TSettingsClass>(action));
 		}
 	}
 }

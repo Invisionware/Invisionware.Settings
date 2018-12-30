@@ -34,11 +34,11 @@ namespace Invisionware.Settings
 		/// </returns>
 		/// <exception cref="ArgumentNullException">overrideConfiguration</exception>
 		/// <exception cref="System.ArgumentNullException">overrideConfiguration</exception>
-		public static SettingsConfiguration<T> WithhAppConfig<T>(this SettingsOverrideConfiguration<T> overrideConfiguration, IDictionary<string, Action<T, string>> mappings) where T : class, new()
+		public static SettingsConfiguration WithhAppConfig(this SettingsOverrideConfiguration overrideConfiguration, IDictionary<string, Func<string, object, object>> mappings) 
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
 
-			return overrideConfiguration.With(new AppConfigOverride<T>(mappings));
+			return overrideConfiguration.With(new AppConfigOverride(mappings));
 		}
 	}
 }

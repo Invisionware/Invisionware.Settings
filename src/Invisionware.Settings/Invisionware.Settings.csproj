@@ -13,6 +13,11 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="AppConfigSettingsMgr.cs" />
+	  <Compile Remove="Interfaces\IAppConfigSettingsMgr.cs" />
+	  <Compile Remove="Interfaces\ISettings.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
 		<PackageReference Include="Serilog" Version="2.7.1" />
 	</ItemGroup>

@@ -18,35 +18,34 @@ namespace Invisionware.Settings.Overrides
 	/// <summary>
 	/// Class SettingsOverrideAction.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	/// <seealso cref="ISettingsOverride{T}" />
-	public class SettingsOverrideAction<T> : ISettingsOverride<T>
+	public class SettingsOverrideAction<TSettingsClass> : ISettingsObjectOverride<TSettingsClass>
 	{
 		/// <summary>
 		/// The action
 		/// </summary>
-		private readonly Action<T> _action;
+		private readonly Func<TSettingsClass, TSettingsClass> _enrichFunc;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="SettingsOverrideAction{T}"/> class.
+		/// Initializes a new instance of the <see cref="SettingsOverrideAction{TSettingsClass}"/> class.
 		/// </summary>
-		/// <param name="action">The action.</param>
-		public SettingsOverrideAction(Action<T> action)
+		/// <param name="enrichFunc">The action.</param>
+		public SettingsOverrideAction(Func<TSettingsClass, TSettingsClass> enrichFunc)
 		{
-			_action = action;
+			_enrichFunc = enrichFunc;
 		}
 
-		#region Implementation of ISettingsOverride
+		#region Implementation of ISettingsObjectOverride
 
 		/// <summary>
 		/// Enriches the specified settings.
 		/// </summary>
 		/// <param name="settings">The settings.</param>
-		public void Enrich(T settings)
+		public TSettingsClass Enrich(TSettingsClass settings)
 		{
-			_action(settings);
-		}
+			var value = _enrichFunc(settings);
 
-		#endregion
+			return value;
+		}
+		#endregion Implementation of ISettingsObjectOverride
 	}
 }

@@ -25,18 +25,18 @@ namespace Invisionware.Settings.Overrides.AppConfig
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <seealso cref="ISettingsOverride{T}" />
-	public class AppConfigOverride<T> : ISettingsOverride<T>
+	public class AppConfigOverride : ISettingsValueOverride
 	{
-		public AppConfigOverride(IDictionary<string, Action<T, string>> mappings = null)
+		public AppConfigOverride(IDictionary<string, Func<string, object, object>> mappings = null)
 		{
-			if (mappings == null) mappings = new ConcurrentDictionary<string, Action<T, string>>();
+			if (mappings == null) mappings = new ConcurrentDictionary<string, Func<string, object, object>>();
 
 			Mappings = mappings;
 		}
 
-		public IDictionary<string, Action<T, string>> Mappings { get; set; }
+		public IDictionary<string, Func<string, object, object>> Mappings { get; set; }
 
-		public AppConfigOverride<T> AddMapping(string appSettingsKeyName, Action<T, string> mapAction)
+		public AppConfigOverride AddMapping(string appSettingsKeyName, Func<string, object, object> mapAction)
 		{
 			Mappings[appSettingsKeyName] = mapAction;
 
@@ -48,14 +48,16 @@ namespace Invisionware.Settings.Overrides.AppConfig
 		/// <summary>
 		/// Enriches the specified settings.
 		/// </summary>
-		/// <param name="settings">The settings.</param>
+		/// <param name="value">The settings.</param>
 		/// <exception cref="System.NotImplementedException"></exception>
-		public void Enrich(T settings)
+		public T Enrich<T>(string key, T value)
 		{
-			foreach (var kvp in Mappings)
+			if (Mappings.Keys.Contains(key))
 			{
-				kvp.Value(settings, ConfigurationManager.AppSettings[kvp.Key]);
+				value = (T)Mappings[key](key, value);
 			}
+
+			return value;
 		}
 
 		#endregion

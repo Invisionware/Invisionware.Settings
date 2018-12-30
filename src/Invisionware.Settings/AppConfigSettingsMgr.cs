@@ -26,6 +26,8 @@
 		{
 			Current = configManager;
 
+			Current.LoadSettings();
+
 			return Current;
 		}
 		#endregion Static Methods

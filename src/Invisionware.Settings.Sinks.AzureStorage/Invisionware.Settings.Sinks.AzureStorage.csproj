@@ -13,10 +13,10 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
 		<PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
 	</ItemGroup>
-	<Import Project="..\Invisionware.Settings.Sinks.AzureStorage.Shared\Invisionware.Settings.Sinks.AzureStorage.Shared.projitems" Label="Shared" />
 </Project>

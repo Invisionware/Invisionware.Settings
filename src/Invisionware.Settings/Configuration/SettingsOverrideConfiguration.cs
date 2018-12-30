@@ -18,19 +18,19 @@ namespace Invisionware.Settings
 	/// <summary>
 	/// Class SettingsOverrideConfiguration.
 	/// </summary>
-	public class SettingsOverrideConfiguration<T> where T : class, new()
+	public class SettingsOverrideConfiguration
 	{
 		/// <summary>
 		/// The settings configuration
 		/// </summary>
-		readonly SettingsConfiguration<T> _settingsConfiguration;
+		readonly SettingsConfiguration _settingsConfiguration;
 		/// <summary>
 		/// The add enricher
 		/// </summary>
-		readonly Action<ISettingsOverride<T>> _addOverride;
+		readonly Action<ISettingsOverride> _addOverride;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="SettingsOverrideConfiguration{T}"/> class.
+		/// Initializes a new instance of the <see cref="SettingsOverrideConfiguration"/> class.
 		/// </summary>
 		/// <param name="settingsConfiguration">The settings configuration.</param>
 		/// <param name="addOverride">The add enricher.</param>
@@ -40,10 +40,10 @@ namespace Invisionware.Settings
 		/// addOverride
 		/// </exception>
 		internal SettingsOverrideConfiguration(
-			SettingsConfiguration<T> settingsConfiguration,
-			Action<ISettingsOverride<T>> addOverride)
+			SettingsConfiguration settingsConfiguration,
+			Action<ISettingsOverride> addOverride)
 		{
-            _settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
+			_settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
 			_addOverride = addOverride ?? throw new ArgumentNullException(nameof(addOverride));
 		}
 
@@ -54,7 +54,7 @@ namespace Invisionware.Settings
 		/// <returns>SettingsConfiguration.</returns>
 		/// <exception cref="System.ArgumentNullException">overrideEnrichers</exception>
 		/// <exception cref="System.ArgumentException">Null enricher is not allowed.</exception>
-		public SettingsConfiguration<T> With(params ISettingsOverride<T>[] overrideEnrichers)
+		public SettingsConfiguration With(params ISettingsOverride[] overrideEnrichers)
 		{
 			if (overrideEnrichers == null) throw new ArgumentNullException(nameof(overrideEnrichers));
 

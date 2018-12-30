@@ -13,11 +13,11 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.2.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Settings\Invisionware.Settings.csproj" />
 	</ItemGroup>
-	<Import Project="..\Invisionware.Settings.Sinks.AzureDocumentDb.Shared\Invisionware.Settings.Sinks.AzureDocumentDb.Shared.projitems" Label="Shared" />
 </Project>

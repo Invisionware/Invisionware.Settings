@@ -25,7 +25,7 @@ namespace Invisionware.Settings.Sinks
 		/// <param name="settings">The settings.</param>
 		/// <param name="settingsValue">The settings value.</param>
 		/// <returns>SettingsConfiguration&lt;T&gt;.</returns>
-		public static SettingsConfiguration<T> Memory<T>(this SettingsReaderSinkConfiguration<T> settings, T settingsValue) where T : class, new()
+		public static SettingsConfiguration Memory<T>(this SettingsReaderSinkConfiguration settings, T settingsValue)
 		{
 			return settings.Sink(new MemorySink(settingsValue));
 		}
@@ -37,7 +37,7 @@ namespace Invisionware.Settings.Sinks
 		/// <param name="settings">The settings.</param>
 		/// <param name="settingsValue">The settings value.</param>
 		/// <returns>SettingsConfiguration&lt;T&gt;.</returns>
-		public static SettingsConfiguration<T> Memory<T>(this SettingsWriterSinkConfiguration<T> settings, T settingsValue) where T : class, new()
+		public static SettingsConfiguration Memory<T>(this SettingsWriterSinkConfiguration settings, T settingsValue)
 		{
 			return settings.Sink(new MemorySink(settingsValue));
 		}

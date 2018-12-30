@@ -30,11 +30,11 @@ namespace Invisionware.Settings
 		/// <param name="commandLine">The command line.</param>
 		/// <param name="args">The arguments.</param>
 		/// <returns>SettingsConfiguration.</returns>
-		public static SettingsConfiguration<T> WithCommandLineParser<T>(this SettingsOverrideConfiguration<T> overrideConfiguration, string commandLine, string[] args) where T : class, new()
+		public static SettingsConfiguration WithCommandLineParser(this SettingsOverrideConfiguration overrideConfiguration, string commandLine, string[] args) 
 		{
 			if (overrideConfiguration == null) throw new ArgumentNullException(nameof(overrideConfiguration));
 
-			return overrideConfiguration.With(new CommandLineParserSettingsOverride<T>(commandLine, args));
+			return overrideConfiguration.With(new CommandLineParserSettingsOverride(commandLine, args));
 		}
 	}
 }

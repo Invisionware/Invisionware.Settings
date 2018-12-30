@@ -19,16 +19,15 @@ namespace Invisionware.Settings
 	/// <summary>
 	/// Class SettingsReaderSinkConfiguration.
 	/// </summary>
-	/// <typeparam name="TSetting">The type of the t setting.</typeparam>
-	/// <seealso cref="Invisionware.Settings.SettingsSinkConfiguration{TSetting, Invisionware.Settings.Sinks.ISettingsReaderSink}" />
-	public class SettingsReaderSinkConfiguration<TSetting> : SettingsSinkConfiguration<TSetting, ISettingsReaderSink> where TSetting : class, new()
+	/// <seealso cref="Invisionware.Settings.SettingsSinkConfiguration{Invisionware.Settings.Sinks.ISettingsReaderSink}" />
+	public class SettingsReaderSinkConfiguration : SettingsSinkConfiguration< ISettingsReaderSink> 
 	{
 		/// <summary>
-		/// Initializes a new instance of the <see cref="SettingsReaderSinkConfiguration{TSetting}"/> class.
+		/// Initializes a new instance of the <see cref="SettingsReaderSinkConfiguration"/> class.
 		/// </summary>
 		/// <param name="settingsConfiguration">The settings configuration.</param>
 		/// <param name="addSink">The add sink.</param>
-		internal SettingsReaderSinkConfiguration(SettingsConfiguration<TSetting> settingsConfiguration, Action<ISettingsReaderSink> addSink) : base(
+		internal SettingsReaderSinkConfiguration(SettingsConfiguration settingsConfiguration, Action<ISettingsReaderSink> addSink) : base(
 			settingsConfiguration, addSink)
 		{
 			

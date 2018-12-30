@@ -22,9 +22,11 @@ namespace Invisionware.Settings.Sinks
 	/// <summary>
 	/// Class MemorySink.
 	/// </summary>
-	/// <seealso cref="ISettingsReaderSink" />
-	/// <seealso cref="ISettingsWriterSink" />
-	public class MemorySink : ISettingsReaderSink, ISettingsWriterSink
+	/// <seealso cref="ISettingsObjectReaderSink" />
+	/// <seealso cref="ISettingsValueReaderSink" />
+	/// <seealso cref="ISettingsObjectWriterSink" />
+	/// <seealso cref="ISettingsValueWriterSink" />
+	public class MemorySink : ISettingsObjectReaderSink, ISettingsValueReaderSink, ISettingsObjectWriterSink, ISettingsValueWriterSink
 	{
 		#region Member Variables
 		/// <summary>
@@ -43,8 +45,8 @@ namespace Invisionware.Settings.Sinks
 		}
 
 		#region Event Handlers
-		public EventHandler<SettingsLoadingEventArgs> OnSettingsLoading { get; set; }
-		public EventHandler<SettingsSavingEventArgs> OnSettingsSaving { get; set; }
+		public EventHandler<SettingsLoadingEventArgs> OnSettingsRead { get; set; }
+		public EventHandler<SettingsSavingEventArgs> OnSettingsWritting { get; set; }
 		#endregion Event Handlers
 
 		#region Implementation of ISettingsAsync
@@ -53,34 +55,62 @@ namespace Invisionware.Settings.Sinks
 		public bool Close() { return true; }
 		#endregion Implementation of ISettingsAsync
 
-		#region Implementation of ISettingsWriterSink
+		#region Implementation of ISettingsObjectReaderSink
+		/// <summary>
+		/// Loads this instance.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <returns>T.</returns>
+		public T ReadSetting<T>() where T : class
+		{
+			OnSettingsRead?.Invoke(this, new SettingsLoadingEventArgs() { Data = _currentValue });
+
+			return _currentValue;
+		}
+		#endregion Implementation of ISettingsObjectReaderSink
+
+		#region Implementation of ISettingsObjectWriterSink
 		/// <summary>
 		/// Saves the specified settings.
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="settings">The settings.</param>
 		/// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-		public bool Save<T>(T settings) where T : class
+		public bool WriteSetting<T>(T settings) where T : class
 		{
-			OnSettingsSaving?.Invoke(this, new SettingsSavingEventArgs() { Data = settings });
+			OnSettingsWritting?.Invoke(this, new SettingsSavingEventArgs() { Data = settings });
+
 			_currentValue = settings;
 
 			return true;
 		}
-		#endregion
+		#endregion ISettingsObjectWriterSink
 
-		#region Implementation of ISettingsReaderSink
+		#region Implementation of ISettingsValueReaderSink
+		public T ReadSetting<T>(string key, T defaultValue = default(T))
+		{
+			OnSettingsRead?.Invoke(this, new SettingsLoadingEventArgs() { Data = _currentValue });
+
+			return _currentValue[key];
+		}
+		#endregion Implementation of ISettingsValueReaderSink
+
+		#region Implementation of ISettingsValueWriterSink
 		/// <summary>
-		/// Loads this instance.
+		/// Writes the specified setting value
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
-		/// <returns>T.</returns>
-		public T Load<T>() where T : class
+		/// <param name="key"></param>
+		/// <param name="value"></param>
+		/// <returns></returns>
+		public bool WriteSetting<T>(string key, T value)
 		{
-			OnSettingsLoading?.Invoke(this, new SettingsLoadingEventArgs() { Data = _currentValue });
+			OnSettingsWritting?.Invoke(this, new SettingsSavingEventArgs() { Data = $"{key}={value}" });
 
-			return _currentValue;
+			_currentValue[key] = value;
+
+			return true;
 		}
-		#endregion
+		#endregion Implementation of ISettingsValueWriterSink
 	}
 }

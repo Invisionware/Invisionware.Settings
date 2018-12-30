@@ -16,9 +16,9 @@ using Invisionware.Settings.Sinks;
 
 namespace Invisionware.Settings
 {
-	public class SettingsWriterSinkConfiguration<T> : SettingsSinkConfiguration<T, ISettingsWriterSink> where T : class, new()
+	public class SettingsWriterSinkConfiguration : SettingsSinkConfiguration<ISettingsWriterSink>
 	{
-		internal SettingsWriterSinkConfiguration(SettingsConfiguration<T> settingsConfiguration, Action<ISettingsWriterSink> addSink) : base(
+		internal SettingsWriterSinkConfiguration(SettingsConfiguration settingsConfiguration, Action<ISettingsWriterSink> addSink) : base(
 			settingsConfiguration, addSink)
 		{
 
