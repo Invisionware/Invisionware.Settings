@@ -102,21 +102,21 @@ namespace Invisionware.Settings.Sinks.Azure
 		public Task<bool> CloseAsync() { return Task.FromResult(Close()); }
 		#endregion
 
-		#region Implementation of ISettingsObjectReaderSink
-		/// <summary>
-		/// Loads this instance.
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <returns>T.</returns>
-		public T ReadSetting<T>() where T : class
-		{
-			var task = ReadSettingAsync<T>();
+		//#region Implementation of ISettingsObjectReaderSink
+		///// <summary>
+		///// Loads this instance.
+		///// </summary>
+		///// <typeparam name="T"></typeparam>
+		///// <returns>T.</returns>
+		//public T ReadSetting<T>() where T : class
+		//{
+		//	var task = ReadSettingAsync<T>();
 
-			task.Wait();
+		//	task.Wait();
 
-			return task.Result;
-		}
-		#endregion Implementation of ISettingsObjectReaderSink
+		//	return task.Result;
+		//}
+		//#endregion Implementation of ISettingsObjectReaderSink
 
 		#region Implementation of ISettingsObjectReaderSinkAsync
 		/// <summary>
@@ -151,20 +151,20 @@ namespace Invisionware.Settings.Sinks.Azure
 		}
 		#endregion Implementation of ISettingsObjectReaderSinkAsync
 
-		#region Implementation of ISettingsObjectWriterSink
-		/// <summary>
-		/// Saves the specified settings.
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="settings">The settings.</param>
-		/// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-		public bool WriteSetting<T>(T settings) where T : class
-		{
-			WriteSettingAsync(settings).Wait();
+		//#region Implementation of ISettingsObjectWriterSink
+		///// <summary>
+		///// Saves the specified settings.
+		///// </summary>
+		///// <typeparam name="T"></typeparam>
+		///// <param name="settings">The settings.</param>
+		///// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+		//public bool WriteSetting<T>(T settings) where T : class
+		//{
+		//	WriteSettingAsync(settings).Wait();
 
-			return true;
-		}
-		#endregion Implementation of ISettingsObjectWriterSink
+		//	return true;
+		//}
+		//#endregion Implementation of ISettingsObjectWriterSink
 
 		#region Implementation of ISettingsObjectWriterSinkAsync
 		/// <summary>

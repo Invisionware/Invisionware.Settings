@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFrameworks>netcoreapp2.0;netstandard2.0;net472</TargetFrameworks>
 		<PackageId>Invisionware.Settings.Sinks.SystemAppConfig</PackageId>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Settings</PackageProjectUrl>
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Settings/raw/master/logo.png</PackageIconUrl>
 		<Description>Contains an implementation of sink for System ConfigurationManager for the Invisionware Settings Library</Description>
-		<PackageReleaseNotes/>
+		<PackageReleaseNotes />
 		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<PackageTags>invisionware,settings,appsettings,config,configuration,azure</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

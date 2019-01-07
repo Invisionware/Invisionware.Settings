@@ -26,7 +26,7 @@ namespace Invisionware.Settings.Tests
 		public void AzureDocumentDbJsonSerializerTest()
 		{
 			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
-			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"]; 
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthorizationKey"]; 
 
 			var jsonSettings = new JsonSerializerSettings()
 			{
@@ -67,7 +67,7 @@ namespace Invisionware.Settings.Tests
 		public void AzureDocumentDbTest()
 		{
 			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
-			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthorizationKey"];
 
 			var settingsConfig = new SettingsConfiguration().WriteTo.AzureDocumentDb(endPointUri, authKey).ReadFrom.AzureDocumentDb(endPointUri, authKey);
 
@@ -102,7 +102,7 @@ namespace Invisionware.Settings.Tests
 		public async Task AzureDocumentDbTestAsync()
 		{
 			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
-			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthorizationKey"];
 
 			var settingsConfig = new SettingsConfiguration().WriteTo.AzureDocumentDb(endPointUri, authKey).ReadFrom.AzureDocumentDb(endPointUri, authKey);
 
@@ -137,7 +137,7 @@ namespace Invisionware.Settings.Tests
 		public async Task AzureDocumentDbMaxVersionsTest()
 		{
 			var endPointUri = new Uri(ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:EndPoint"]);
-			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthKey"];
+			var authKey = ConfigurationManager.AppSettings["settings:sink:AzureDocumentDb:AuthorizationKey"];
 			var databaseName = "AppSettings";
 			var collectionName = "Config";
 			int maxVersions = 3;

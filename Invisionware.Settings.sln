@@ -5,19 +5,6 @@ VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{030783D5-8B49-446B-B4BD-623CE9C87C7E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{A31F0DBA-7B31-40C8-9887-2E51BD76D565}"
-	ProjectSection(SolutionItems) = preProject
-		nuspec\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.nuspec = nuspec\Invisionware.Settings.AppConfigSettings.AzureCloudAppConfig.nuspec
-		nuspec\Invisionware.Settings.AppConfigSettings.SystemAppConfig.nuspec = nuspec\Invisionware.Settings.AppConfigSettings.SystemAppConfig.nuspec
-		nuspec\Invisionware.Settings.nuspec = nuspec\Invisionware.Settings.nuspec
-		nuspec\Invisionware.Settings.Overrides.AppConfig.nuspec = nuspec\Invisionware.Settings.Overrides.AppConfig.nuspec
-		nuspec\Invisionware.Settings.Overrides.AzureConfigurationManage.nuspec = nuspec\Invisionware.Settings.Overrides.AzureConfigurationManage.nuspec
-		nuspec\Invisionware.Settings.Overrides.CommandLineParser.nuspec = nuspec\Invisionware.Settings.Overrides.CommandLineParser.nuspec
-		nuspec\Invisionware.Settings.Sinks.AzureDocumentDb.nuspec = nuspec\Invisionware.Settings.Sinks.AzureDocumentDb.nuspec
-		nuspec\Invisionware.Settings.Sinks.AzureStorage.nuspec = nuspec\Invisionware.Settings.Sinks.AzureStorage.nuspec
-		nuspec\Invisionware.Settings.Sinks.JsonNet.nuspec = nuspec\Invisionware.Settings.Sinks.JsonNet.nuspec
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".misc", ".misc", "{B67DBE97-2A64-4E27-8878-698FC381DABD}"
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
@@ -53,11 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sinks", "Sinks", "{EBDA1AB9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Overrides", "Overrides", "{8D0B2FDE-4C03-437C-82AE-090FC5B18D0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.ConfigBuilder", "src\Invisionware.Settings.Sinks.ConfigBuilder\Invisionware.Settings.Sinks.ConfigBuilder.csproj", "{00970A98-54CB-4718-8ADF-6432C9A7B8A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.ConfigBuilder", "src\Invisionware.Settings.Sinks.ConfigBuilder\Invisionware.Settings.Sinks.ConfigBuilder.csproj", "{00970A98-54CB-4718-8ADF-6432C9A7B8A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.AzureCloudAppConfig", "src\Invisionware.Settings.Sinks.AzureCloudAppConfig\Invisionware.Settings.Sinks.AzureCloudAppConfig.csproj", "{8AEBE824-4AAB-4E30-B5F3-CEA40D333E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.AzureCloudAppConfig", "src\Invisionware.Settings.Sinks.AzureCloudAppConfig\Invisionware.Settings.Sinks.AzureCloudAppConfig.csproj", "{8AEBE824-4AAB-4E30-B5F3-CEA40D333E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Settings.Sinks.SystemAppConfig", "src\Invisionware.Settings.Sinks.SystemAppConfig\Invisionware.Settings.Sinks.SystemAppConfig.csproj", "{04F14845-4848-4CC7-A6DB-0F84E8F1D932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Settings.Sinks.SystemAppConfig", "src\Invisionware.Settings.Sinks.SystemAppConfig\Invisionware.Settings.Sinks.SystemAppConfig.csproj", "{04F14845-4848-4CC7-A6DB-0F84E8F1D932}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

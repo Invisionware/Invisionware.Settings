@@ -2,7 +2,7 @@
 
 namespace Invisionware.Settings
 {
-	public interface ISettingsObjectReaderSinkAsync : ISettingsReaderSink, ISettingsSinkAsync
+	public interface ISettingsObjectReaderSinkAsync : ISettingsReaderSinkAsync, ISettingsSinkAsync
 	{
 		Task<T> ReadSettingAsync<T>() where T : class;
 	}

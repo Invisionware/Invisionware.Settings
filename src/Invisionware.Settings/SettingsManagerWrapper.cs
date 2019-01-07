@@ -69,7 +69,7 @@ namespace Invisionware.Settings
 		public T ReadSetting<T>(string key, T defaultValue = default(T))
 		{
 			if (_readerSink == null) throw new NullReferenceException("Reader Sink not set");
-			if (!(_readerSink is ISettingsValueReaderSink)) { throw new InvalidOperationException("Reader does not support reading name/value pairs"); }
+			if (!(_readerSink is ISettingsValueReaderSink)) { throw new InvalidCastException("Reader does not support reading name/value pairs"); }
 
 			_readerSink.Open();
 
@@ -89,7 +89,7 @@ namespace Invisionware.Settings
 		public async Task<T> ReadSettingAsync<T>(string key, T defaultValue = default(T))
 		{
 			if (_readerSink == null) throw new NullReferenceException("Reader Sink not set");
-			if (!(_readerSink is ISettingsValueReaderSinkAsync)) { throw new InvalidOperationException("Reader does not support reading name/value pairs"); }
+			if (!(_readerSink is ISettingsValueReaderSinkAsync)) { throw new InvalidCastException("Reader does not support reading name/value pairs"); }
 
 			var openResult = await ((ISettingsValueReaderSinkAsync)_readerSink).OpenAsync();
 
@@ -109,7 +109,7 @@ namespace Invisionware.Settings
 		public bool WriteSetting<T>(string key, T value)
 		{
 			if (_writerSink == null) throw new NullReferenceException("Writer Sink not set");
-			if (!(_writerSink is ISettingsValueWriterSink)) { throw new InvalidOperationException("Reader does not support writting name/value pairs"); }
+			if (!(_writerSink is ISettingsValueWriterSink)) { throw new InvalidCastException("Reader does not support writting name/value pairs"); }
 
 			_writerSink.Open();
 
@@ -130,7 +130,7 @@ namespace Invisionware.Settings
 		public async Task<bool> WriteSettingAsync<T>(string key, T value)
 		{
 			if (_writerSink == null) throw new NullReferenceException("Writer Sink not set");
-			if (!(_writerSink is ISettingsValueWriterSinkAsync)) { throw new InvalidOperationException("Reader does not support writting name/value pairs"); }
+			if (!(_writerSink is ISettingsValueWriterSinkAsync)) { throw new InvalidCastException("Reader does not support writting name/value pairs"); }
 
 			var openResult = await ((ISettingsValueWriterSinkAsync)_writerSink).OpenAsync();
 
@@ -157,7 +157,7 @@ namespace Invisionware.Settings
 		public TSettingsClass ReadSettings<TSettingsClass>() where TSettingsClass : class, new()
 		{
 			if (_readerSink == null) throw new NullReferenceException("Reader Sink not set");
-			if (!(_readerSink is ISettingsObjectReaderSink)) { throw new InvalidOperationException("Reader does not support reading objects"); }
+			if (!(_readerSink is ISettingsObjectReaderSink)) { throw new InvalidCastException("Reader does not support reading objects"); }
 
 			_readerSink.Open();
 
@@ -182,7 +182,7 @@ namespace Invisionware.Settings
 		public async Task<TSettingsClass> ReadSettingsAsync<TSettingsClass>() where TSettingsClass : class, new()
 		{
 			if (_readerSink == null) throw new NullReferenceException("Reader Sink not set");
-			if (!(_readerSink is ISettingsObjectReaderSinkAsync)) { throw new InvalidOperationException("Reader does not support reading objects"); }
+			if (!(_readerSink is ISettingsObjectReaderSinkAsync)) { throw new InvalidCastException("Reader does not support reading objects"); }
 
 			var openResult = await ((ISettingsObjectReaderSinkAsync)_readerSink).OpenAsync();
 
@@ -208,7 +208,7 @@ namespace Invisionware.Settings
 		public bool WriteSettings<TSettingsClass>(TSettingsClass settings) where TSettingsClass : class, new()
 		{
 			if (_writerSink == null) throw new NullReferenceException("Writer Sink not set");
-			if (!(_writerSink is ISettingsObjectWriterSink)) { throw new InvalidOperationException("Reader does not support writting objects"); }
+			if (!(_writerSink is ISettingsObjectWriterSink)) { throw new InvalidCastException("Reader does not support writting objects"); }
 
 			_writerSink.Open();
 
@@ -234,7 +234,7 @@ namespace Invisionware.Settings
 		public async Task<bool> WriteSettingsAsync<TSettingsClass>(TSettingsClass settings) where TSettingsClass : class, new()
 		{
 			if (_writerSink == null) throw new NullReferenceException("Writer Sink not set");
-			if (!(_writerSink is ISettingsObjectWriterSinkAsync)) { throw new InvalidOperationException("Reader does not support writting objects"); }
+			if (!(_writerSink is ISettingsObjectWriterSinkAsync)) { throw new InvalidCastException("Reader does not support writting objects"); }
 
 			var openResult = await ((ISettingsObjectWriterSinkAsync)_writerSink).OpenAsync();
 

@@ -159,20 +159,20 @@ namespace Invisionware.Settings.Sinks.Azure
 		}
 		#endregion Implementation of ISettingsObjectReaderSinkAsync
 
-		#region Implementation of ISettingsObjectWritterSink
-		/// <summary>
-		/// Saves the specified settings.
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="settings">The settings.</param>
-		/// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-		public bool WriteSetting<T>(T settings) where T : class
-		{
-			WriteSettingAsync(settings).Wait();
+		//#region Implementation of ISettingsObjectWritterSink
+		///// <summary>
+		///// Saves the specified settings.
+		///// </summary>
+		///// <typeparam name="T"></typeparam>
+		///// <param name="settings">The settings.</param>
+		///// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+		//public bool WriteSetting<T>(T settings) where T : class
+		//{
+		//	WriteSettingAsync(settings).Wait();
 
-			return true;
-		}
-		#endregion Implementation of ISettingsObjectWritterSink
+		//	return true;
+		//}
+		//#endregion Implementation of ISettingsObjectWritterSink
 
 		#region Implementation of ISettingsObjectWritterSinkAsync
 		/// <summary>

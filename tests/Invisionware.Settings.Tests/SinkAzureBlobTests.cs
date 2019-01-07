@@ -15,39 +15,39 @@ namespace Invisionware.Settings.Tests
 	[Category("Settings.Sink.AzureBlob")]
 	public class SinkAzureBlobTests
 	{
-		[Test]
-		public void AzureBlobTest()
-		{
-			var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureBlob:ConnectionString"];
+		//[Test]
+		//public void AzureBlobTest()
+		//{
+		//	var connectionString = ConfigurationManager.AppSettings["settings:sink:AzureBlob:ConnectionString"];
 
-			var settingsConfig = new SettingsConfiguration().WriteTo.AzureBlobStorage(connectionString).ReadFrom.AzureBlobStorage(connectionString);
+		//	var settingsConfig = new SettingsConfiguration().WriteTo.AzureBlobStorage(connectionString).ReadFrom.AzureBlobStorage(connectionString);
 
-			settingsConfig.OnSettingsSaving += (sender, args) =>
-			{
-				args.Should().NotBeNull();
-				args.Data.Should().NotBeNull();
-			};
+		//	settingsConfig.OnSettingsSaving += (sender, args) =>
+		//	{
+		//		args.Should().NotBeNull();
+		//		args.Data.Should().NotBeNull();
+		//	};
 
-			settingsConfig.OnSettingsLoading += (sender, args) =>
-			{
-				args.Should().NotBeNull();
-				args.Data.Should().NotBeNull();
-			};
+		//	settingsConfig.OnSettingsLoading += (sender, args) =>
+		//	{
+		//		args.Should().NotBeNull();
+		//		args.Data.Should().NotBeNull();
+		//	};
 
-			var settingsMgr = settingsConfig.CreateSettingsMgr<ISettingsObjectMgr>();
-			settingsMgr.Should().NotBeNull();
-			settingsMgr.Should().BeAssignableTo<ISettingsObjectMgr>();
+		//	var settingsMgr = settingsConfig.CreateSettingsMgr<ISettingsObjectMgr>();
+		//	settingsMgr.Should().NotBeNull();
+		//	settingsMgr.Should().BeAssignableTo<ISettingsObjectMgr>();
 
-			var settings = new CustomSettings();
+		//	var settings = new CustomSettings();
 
-			settingsMgr.WriteSettings(settings);
+		//	settingsMgr.WriteSettings(settings);
 
-			settings.String1 = "Test1";
+		//	settings.String1 = "Test1";
 
-			var settingsNew = settingsMgr.ReadSettings<CustomSettings>();
+		//	var settingsNew = settingsMgr.ReadSettings<CustomSettings>();
 
-			settings.String1.Should().NotBe(settingsNew.String1);
-		}
+		//	settings.String1.Should().NotBe(settingsNew.String1);
+		//}
 
 		[Test]
 		public async Task AzureBlobTestAsync()

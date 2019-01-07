@@ -26,7 +26,7 @@ namespace Invisionware.Settings.Sinks
 	/// <seealso cref="ISettingsValueReaderSink" />
 	/// <seealso cref="ISettingsObjectWriterSink" />
 	/// <seealso cref="ISettingsValueWriterSink" />
-	public class MemorySink : ISettingsObjectReaderSink, ISettingsValueReaderSink, ISettingsObjectWriterSink, ISettingsValueWriterSink
+	public class MemorySink : ISettingsObjectReaderSink, ISettingsObjectWriterSink //, ISettingsValueReaderSink, ISettingsValueWriterSink
 	{
 		#region Member Variables
 		/// <summary>
@@ -90,7 +90,7 @@ namespace Invisionware.Settings.Sinks
 		public T ReadSetting<T>(string key, T defaultValue = default(T))
 		{
 			OnSettingsRead?.Invoke(this, new SettingsLoadingEventArgs() { Data = _currentValue });
-
+			
 			return _currentValue[key];
 		}
 		#endregion Implementation of ISettingsValueReaderSink
