@@ -42,7 +42,7 @@ namespace Invisionware.Settings
 		/// or
 		/// addSink
 		/// </exception>
-		internal SettingsSinkConfiguration(SettingsConfiguration settingsConfiguration, Action<TSink> addSink)
+		internal SettingsSinkConfiguration(SettingsConfiguration settingsConfiguration, Action<TSink> addSink)	
 		{
 			_settingsConfiguration = settingsConfiguration ?? throw new ArgumentNullException(nameof(settingsConfiguration));
 			_addSink = addSink ?? throw new ArgumentNullException(nameof(addSink));
