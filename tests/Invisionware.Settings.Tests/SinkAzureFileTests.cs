@@ -13,6 +13,7 @@ namespace Invisionware.Settings.Tests
 	[TestFixture]
 	[Category("Settings")]
 	[Category("Settings.Sink.AzureFile")]
+	[Ignore("Missing Configuration")]
 	public class SinkAzureFileTests
 	{
 		//[Test]

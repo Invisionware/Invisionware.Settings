@@ -15,6 +15,7 @@ namespace Invisionware.Settings.Tests
 	[TestFixture]
 	[Category("Settings")]
 	[Category("Settings.Sink.AzureDocumentDb")]
+	[Ignore("Missing Configuration")]
 	public class SinkAzureDocumentDbTests
 	{
 		public void AzureDocumentDbAppSettingsConstructor()
