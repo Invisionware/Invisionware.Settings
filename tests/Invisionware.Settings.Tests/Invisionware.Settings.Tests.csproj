@@ -1,40 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
 
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="5.9.0" />
-    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.9.2" />
-    <PackageReference Include="nunit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentAssertions" Version="5.9.0" />
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.9.2" />
+		<PackageReference Include="nunit" Version="3.12.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\Invisionware.Settings.Overrides.AzureConfigurationManager.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureCloudAppConfig\Invisionware.Settings.Sinks.AzureCloudAppConfig.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureDocumentDb\Invisionware.Settings.Sinks.AzureDocumentDb.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureStorage\Invisionware.Settings.Sinks.AzureStorage.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.ConfigBuilder\Invisionware.Settings.Sinks.ConfigBuilder.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.JsonNet\Invisionware.Settings.Sinks.JsonNet.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.SystemAppConfig\Invisionware.Settings.Sinks.SystemAppConfig.csproj" />
-    <ProjectReference Include="..\..\src\Invisionware.Settings\Invisionware.Settings.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AzureConfigurationManager\Invisionware.Settings.Overrides.AzureConfigurationManager.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureCloudAppConfig\Invisionware.Settings.Sinks.AzureCloudAppConfig.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureDocumentDb\Invisionware.Settings.Sinks.AzureDocumentDb.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.AzureStorage\Invisionware.Settings.Sinks.AzureStorage.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.AppConfig\Invisionware.Settings.Overrides.AppConfig.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Overrides.CommandLineParser\Invisionware.Settings.Overrides.CommandLineParser.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.ConfigBuilder\Invisionware.Settings.Sinks.ConfigBuilder.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.JsonNet\Invisionware.Settings.Sinks.JsonNet.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings.Sinks.SystemAppConfig\Invisionware.Settings.Sinks.SystemAppConfig.csproj" />
+		<ProjectReference Include="..\..\src\Invisionware.Settings\Invisionware.Settings.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="app.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="app.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>
