@@ -8,6 +8,7 @@ stages:
         pool: Personal-Docker
 
         variables:
+          - group: Invisionware.Common
           - group: Invisionware.Settings
           - name: solution
             value: '**/*.sln'
